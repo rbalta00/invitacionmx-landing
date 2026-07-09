@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
+import SocialProof from './components/SocialProof';
 import HowItWorks from './components/HowItWorks';
 import Themes from './components/Themes';
 import Features from './components/Features';
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <Header />
       <Hero />
+      <SocialProof />
       <HowItWorks />
       <Themes />
       <Features />

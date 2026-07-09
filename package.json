@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Landing page para Invitamx - Invitaciones XV",
   "scripts": {
-    "dev": "next dev --host 0.0.0.0",
+    "dev": "next dev --host 0.0.0.0 -p 3000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^14.0.0",
