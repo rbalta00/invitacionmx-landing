@@ -54,7 +54,7 @@ export default function Hero() {
             marginBottom: '1rem',
             color: 'var(--primary-dark)',
           }}>
-            Invitaciones XV Profesionales en Minutos
+            Invitaciones XV Profesionales, Hechas por Nosotros
           </h1>
           <p style={{
             fontSize: '18px',
@@ -62,7 +62,7 @@ export default function Hero() {
             marginBottom: '2rem',
             lineHeight: '1.6',
           }}>
-            Diseña, personaliza y comparte invitaciones XV hermosas. Sin complicaciones. Sin código. Sin espera.
+            Tú eliges el tema, el paquete y las secciones que quieras incluir. Nosotros diseñamos tu invitación XV, te la mandamos a revisión y la ajustamos hasta que quede perfecta.
           </p>
           <button
             onClick={handleWhatsApp}

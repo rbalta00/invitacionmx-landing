@@ -16,10 +16,22 @@ export default function Pricing() {
       subtitle: 'Perfecto para empezar',
       features: [
         '4 fotos en galería',
-        'Secciones básicas',
-        '5 temas disponibles',
-        'Link compartible',
-        'Confirmación de asistencia',
+        '12 temas a elegir',
+        'Link compartible por WhatsApp',
+      ],
+      seccionesTitulo: 'Incluye estas secciones:',
+      secciones: [
+        'Pantalla de apertura',
+        'Portada principal',
+        'Cuenta regresiva',
+        'Mensaje de bienvenida',
+        'Ubicación de ceremonia',
+        'Ubicación de recepción',
+        'Itinerario del día',
+        'Código de vestimenta',
+        'Galería de fotos',
+        'Confirmación de asistencia (RSVP)',
+        'Mensaje de cierre',
       ],
     },
     {
@@ -29,11 +41,15 @@ export default function Pricing() {
       isPopular: true,
       features: [
         '8 fotos en galería',
-        'Todas las secciones',
-        '12 temas disponibles',
-        'Animaciones premium',
-        'Descargar PDF invitación',
-        'Lista de regalos',
+        '12 temas a elegir',
+        'Descargar PDF de la invitación',
+      ],
+      seccionesTitulo: 'Todo lo del Básico, más:',
+      secciones: [
+        'Padres y padrinos',
+        'Mesa de regalos y datos bancarios',
+        'Hashtag de Instagram',
+        'Agregar evento a calendario',
       ],
     },
     {
@@ -42,11 +58,12 @@ export default function Pricing() {
       subtitle: 'Todo incluido',
       features: [
         '14 fotos en galería',
-        'Personalizaciones ilimitadas',
-        'Todos los 12 temas',
+        '12 temas a elegir',
         'Soporte prioritario',
-        'Cambios ilimitados',
-        'Fondo personalizado',
+      ],
+      seccionesTitulo: 'Todo lo del Premium, más:',
+      secciones: [
+        'Control de pases de invitados',
       ],
     },
   ];
@@ -133,12 +150,36 @@ export default function Pricing() {
                 fontSize: '14px',
                 listStyle: 'none',
                 padding: 0,
-                marginBottom: '1.5rem',
+                marginBottom: '1rem',
                 color: plan.isPopular ? 'white' : 'var(--text-primary)',
               }}>
                 {plan.features.map((feature, featureIdx) => (
                   <li key={featureIdx} style={{ padding: '0.5rem 0' }}>
                     ✓ {feature}
+                  </li>
+                ))}
+              </ul>
+              <p style={{
+                fontSize: '12px',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.02em',
+                marginBottom: '0.5rem',
+                color: plan.isPopular ? 'rgba(255,255,255,0.85)' : 'var(--text-secondary)',
+              }}>
+                {plan.seccionesTitulo}
+              </p>
+              <ul style={{
+                textAlign: 'left',
+                fontSize: '13px',
+                listStyle: 'none',
+                padding: 0,
+                marginBottom: '1.5rem',
+                color: plan.isPopular ? 'white' : 'var(--text-primary)',
+              }}>
+                {plan.secciones.map((seccion, seccionIdx) => (
+                  <li key={seccionIdx} style={{ padding: '0.25rem 0' }}>
+                    • {seccion}
                   </li>
                 ))}
               </ul>

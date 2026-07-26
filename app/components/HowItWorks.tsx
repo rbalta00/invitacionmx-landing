@@ -3,20 +3,25 @@ export default function HowItWorks() {
     {
       number: '1️⃣',
       title: 'Envías Mensaje',
-      description: 'Contactas por WhatsApp eligiendo tu plan y tema favorito.',
+      description: 'Contactas por WhatsApp eligiendo tu tema, tu paquete y las secciones que quieras incluir.',
     },
     {
       number: '2️⃣',
-      title: 'Yo Creo',
-      description: 'Personalizo tu invitación con tus fotos, datos y detalles especiales.',
+      title: 'Yo Creo tu Invitación',
+      description: 'Diseño tu invitación con tus fotos, datos y detalles especiales.',
     },
     {
       number: '3️⃣',
-      title: 'Recibís Link',
-      description: 'Te mando el link para que lo compartas con tus 15 y huéspedes.',
+      title: 'La Revisas',
+      description: 'Te mando una vista previa para que la revises y pidas los ajustes que necesites.',
     },
     {
       number: '4️⃣',
+      title: 'Recibís tu Link',
+      description: 'Una vez aprobada, te mando el link final para que lo compartas con tus 15 y huéspedes.',
+    },
+    {
+      number: '5️⃣',
       title: '¡Listo!',
       description: 'Tus huéspedes ven la invitación en celular, confirman y ven lista de regalos.',
     },
