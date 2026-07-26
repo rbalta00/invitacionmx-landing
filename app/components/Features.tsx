@@ -1,3 +1,5 @@
+'use client';
+
 export default function Features() {
   const features = [
     { icon: '🎵', title: 'Música Personalizada', description: 'Elige la canción perfecta para cuando se abra tu invitación.' },

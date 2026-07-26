@@ -1,21 +1,70 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+
+function Avatar({ slug, author }: { slug: string; author: string }) {
+  const [photoOk, setPhotoOk] = useState(true);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const el = imgRef.current;
+    if (!el) return;
+    const fail = () => setPhotoOk(false);
+    if (el.complete && el.naturalWidth === 0) fail();
+    el.addEventListener('error', fail);
+    return () => el.removeEventListener('error', fail);
+  }, []);
+
+  return (
+    <div style={{
+      width: '44px',
+      height: '44px',
+      borderRadius: '50%',
+      background: 'var(--surface-light)',
+      color: 'var(--primary-dark)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontWeight: 600,
+      marginBottom: '0.75rem',
+      overflow: 'hidden',
+      flexShrink: 0,
+    }}>
+      {photoOk ? (
+        <img
+          ref={imgRef}
+          src={`/images/testimonials/${slug}.jpg`}
+          alt={author}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+      ) : (
+        author.charAt(0)
+      )}
+    </div>
+  );
+}
+
 export default function Testimonials() {
   const testimonials = [
     {
       rating: 5,
       text: 'No sabía ni por dónde empezar. Fue súper fácil. Mi invitación quedó hermosa y mis huéspedes la amaron.',
       author: 'María',
+      slug: 'maria',
       location: 'Guanajuato',
     },
     {
       rating: 5,
       text: 'Todos mis amigas querían el link. La invitación se veía más cara de lo que pagué. ¡Muy recomendado!',
       author: 'Sofía',
+      slug: 'sofia',
       location: 'CDMX',
     },
     {
       rating: 5,
       text: 'El atención al cliente fue excelente. Me ayudó con cada detalle. ¡Mi XV fue perfecta!',
       author: 'Valentina',
+      slug: 'valentina',
       location: 'Jalisco',
     },
   ];
@@ -50,6 +99,7 @@ export default function Testimonials() {
               border: '1px solid var(--border)',
             }}
           >
+            <Avatar slug={testimonial.slug} author={testimonial.author} />
             <div style={{
               color: 'var(--accent)',
               fontSize: '18px',
