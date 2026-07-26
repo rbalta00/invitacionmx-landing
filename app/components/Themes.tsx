@@ -35,7 +35,6 @@ export default function Themes() {
         }}>
           <iframe
             src="https://invitacionmx-demo.vercel.app/?catalog=true"
-            loading="lazy"
             title="Catálogo de Temas XV en vivo"
             style={{
               width: '100%',
