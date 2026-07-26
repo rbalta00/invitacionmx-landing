@@ -63,7 +63,7 @@ export default function Pricing() {
       ],
       seccionesTitulo: 'Todo lo del Premium, más:',
       secciones: [
-        'Control de pases de invitados',
+        'Pases digitales personalizados por familia (nombre + número de invitados asignados)',
       ],
     },
   ];
