@@ -87,10 +87,11 @@ export default function Hero() {
 
         {videoOk && (
           <div style={{
-            aspectRatio: '9 / 16',
-            overflow: 'hidden',
+            maxWidth: '380px',
+            margin: '0 auto',
             borderRadius: '16px',
             boxShadow: '0 20px 40px rgba(60, 52, 137, 0.2)',
+            overflow: 'hidden',
           }}>
             <video
               ref={videoRef}
@@ -102,8 +103,7 @@ export default function Hero() {
               poster="/images/hero/hero-invitation.jpg"
               style={{
                 width: '100%',
-                height: '100%',
-                objectFit: 'cover',
+                display: 'block',
               }}
             />
           </div>
@@ -111,10 +111,11 @@ export default function Hero() {
 
         {!videoOk && imageOk && (
           <div style={{
-            aspectRatio: '9 / 16',
-            overflow: 'hidden',
+            maxWidth: '380px',
+            margin: '0 auto',
             borderRadius: '16px',
             boxShadow: '0 20px 40px rgba(60, 52, 137, 0.2)',
+            overflow: 'hidden',
           }}>
             <img
               ref={imgRef}
@@ -122,8 +123,7 @@ export default function Hero() {
               alt="Ejemplo de invitación XV"
               style={{
                 width: '100%',
-                height: '100%',
-                objectFit: 'cover',
+                display: 'block',
               }}
             />
           </div>
