@@ -86,33 +86,47 @@ export default function Hero() {
         </div>
 
         {videoOk && (
-          <video
-            ref={videoRef}
-            src="/videos/hero-demo.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/images/hero/hero-invitation.jpg"
-            style={{
-              width: '100%',
-              borderRadius: '16px',
-              boxShadow: '0 20px 40px rgba(60, 52, 137, 0.2)',
-            }}
-          />
+          <div style={{
+            aspectRatio: '9 / 16',
+            overflow: 'hidden',
+            borderRadius: '16px',
+            boxShadow: '0 20px 40px rgba(60, 52, 137, 0.2)',
+          }}>
+            <video
+              ref={videoRef}
+              src="/videos/hero-demo.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/images/hero/hero-invitation.jpg"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </div>
         )}
 
         {!videoOk && imageOk && (
-          <img
-            ref={imgRef}
-            src="/images/hero/hero-invitation.jpg"
-            alt="Ejemplo de invitación XV"
-            style={{
-              width: '100%',
-              borderRadius: '16px',
-              boxShadow: '0 20px 40px rgba(60, 52, 137, 0.2)',
-            }}
-          />
+          <div style={{
+            aspectRatio: '9 / 16',
+            overflow: 'hidden',
+            borderRadius: '16px',
+            boxShadow: '0 20px 40px rgba(60, 52, 137, 0.2)',
+          }}>
+            <img
+              ref={imgRef}
+              src="/images/hero/hero-invitation.jpg"
+              alt="Ejemplo de invitación XV"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </div>
         )}
       </div>
     </section>
