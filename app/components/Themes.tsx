@@ -34,7 +34,7 @@ export default function Themes() {
           border: '1px solid var(--border)',
         }}>
           <iframe
-            src="https://invitacionmx-demo.vercel.app/?catalog=true"
+            src="https://administradorinvitamx.vercel.app/?catalog=true"
             title="Catálogo de Temas XV en vivo"
             style={{
               width: '100%',

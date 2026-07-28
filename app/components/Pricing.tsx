@@ -96,14 +96,14 @@ export default function Pricing() {
             <div
               key={idx}
               style={{
-                background: plan.isPopular ? 'linear-gradient(135deg, #7F77DD 0%, #534AB7 100%)' : 'var(--surface-light)',
+                background: plan.isPopular ? 'linear-gradient(135deg, #8B2942 0%, #4A1226 100%)' : 'var(--surface-light)',
                 borderRadius: '12px',
                 padding: '2rem',
-                border: plan.isPopular ? 'none' : '2px solid #AFA9EC',
+                border: plan.isPopular ? 'none' : '2px solid #DDBE86',
                 textAlign: 'center',
                 transform: plan.isPopular ? 'scale(1.05)' : 'scale(1)',
                 position: 'relative',
-                boxShadow: plan.isPopular ? '0 8px 24px rgba(127, 119, 221, 0.2)' : 'none',
+                boxShadow: plan.isPopular ? '0 8px 24px rgba(74, 18, 38, 0.25)' : 'none',
               }}
             >
               {plan.isPopular && (
@@ -119,7 +119,7 @@ export default function Pricing() {
                   fontSize: '12px',
                   fontWeight: 500,
                 }}>
-                  ⭐ MÁS POPULAR
+                  MÁS POPULAR
                 </div>
               )}
               <h3 style={{
@@ -133,7 +133,8 @@ export default function Pricing() {
               <div style={{
                 fontSize: '32px',
                 fontWeight: 500,
-                color: plan.isPopular ? 'white' : '#534AB7',
+                fontFamily: 'var(--font-display), Georgia, serif',
+                color: plan.isPopular ? 'white' : 'var(--primary)',
                 marginBottom: '0.5rem',
               }}>
                 ${plan.price}
@@ -188,7 +189,7 @@ export default function Pricing() {
                 style={{
                   width: '100%',
                   background: plan.isPopular ? 'white' : 'white',
-                  border: plan.isPopular ? 'none' : '1px solid #AFA9EC',
+                  border: plan.isPopular ? 'none' : '1px solid #DDBE86',
                   padding: '10px',
                   borderRadius: '6px',
                   color: plan.isPopular ? 'var(--primary)' : 'var(--primary-dark)',

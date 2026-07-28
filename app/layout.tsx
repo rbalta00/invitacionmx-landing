@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
+import { Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Analytics from './components/Analytics';
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Invitamx - Invitaciones XV Profesionales | Diseña en Minutos',
@@ -34,10 +41,10 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#7F77DD" />
+        <meta name="theme-color" content="#4A1226" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
       </head>
-      <body>
+      <body className={playfairDisplay.variable}>
         <Analytics />
         {children}
       </body>

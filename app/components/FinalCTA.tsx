@@ -11,7 +11,7 @@ export default function FinalCTA() {
 
   return (
     <section style={{
-      background: 'linear-gradient(135deg, #7F77DD 0%, #534AB7 100%)',
+      background: 'linear-gradient(135deg, #8B2942 0%, #4A1226 100%)',
       padding: '4rem 2rem',
       textAlign: 'center',
       marginTop: '4rem',
@@ -77,7 +77,7 @@ export default function FinalCTA() {
             onMouseOver={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
             onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
           >
-            Premium - $799 ⭐
+            Premium - $799
           </button>
           <button
             onClick={() => handleWhatsApp('Deluxe $1,199')}

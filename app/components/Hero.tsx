@@ -37,7 +37,7 @@ export default function Hero() {
 
   return (
     <section style={{
-      background: 'linear-gradient(135deg, #f8f7fc 0%, #fef5f0 100%)',
+      background: 'linear-gradient(135deg, #FAF3EA 0%, #F8EAD8 100%)',
       padding: '4rem 2rem',
     }}>
       <div style={{
@@ -75,13 +75,13 @@ export default function Hero() {
               fontSize: '16px',
               fontWeight: 500,
               cursor: 'pointer',
-              boxShadow: '0 4px 12px rgba(127, 119, 221, 0.3)',
+              boxShadow: '0 4px 12px rgba(74, 18, 38, 0.25)',
               transition: 'all 0.3s',
             }}
             onMouseOver={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
             onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
           >
-            Quiero Mi Invitación 🎉
+            Quiero Mi Invitación
           </button>
         </div>
 
@@ -90,7 +90,7 @@ export default function Hero() {
             maxWidth: '380px',
             margin: '0 auto',
             borderRadius: '16px',
-            boxShadow: '0 20px 40px rgba(60, 52, 137, 0.2)',
+            boxShadow: '0 20px 40px rgba(74, 18, 38, 0.22)',
             overflow: 'hidden',
           }}>
             <video
@@ -114,7 +114,7 @@ export default function Hero() {
             maxWidth: '380px',
             margin: '0 auto',
             borderRadius: '16px',
-            boxShadow: '0 20px 40px rgba(60, 52, 137, 0.2)',
+            boxShadow: '0 20px 40px rgba(74, 18, 38, 0.22)',
             overflow: 'hidden',
           }}>
             <img

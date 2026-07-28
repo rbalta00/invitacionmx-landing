@@ -1,27 +1,27 @@
 export default function HowItWorks() {
   const steps = [
     {
-      number: '1️⃣',
+      number: '01',
       title: 'Envías Mensaje',
       description: 'Contactas por WhatsApp eligiendo tu tema, tu paquete y las secciones que quieras incluir.',
     },
     {
-      number: '2️⃣',
+      number: '02',
       title: 'Yo Creo tu Invitación',
       description: 'Diseño tu invitación con tus fotos, datos y detalles especiales.',
     },
     {
-      number: '3️⃣',
+      number: '03',
       title: 'La Revisas',
       description: 'Te mando una vista previa para que la revises y pidas los ajustes que necesites.',
     },
     {
-      number: '4️⃣',
+      number: '04',
       title: 'Recibís tu Link',
       description: 'Una vez aprobada, te mando el link final para que lo compartas con tus 15 y huéspedes.',
     },
     {
-      number: '5️⃣',
+      number: '05',
       title: '¡Listo!',
       description: 'Tus huéspedes ven la invitación en celular, confirman y ven lista de regalos.',
     },
@@ -50,15 +50,17 @@ export default function HowItWorks() {
         {steps.map((step, idx) => (
           <div key={idx} style={{ textAlign: 'center' }}>
             <div style={{
-              width: '60px',
-              height: '60px',
-              background: 'var(--surface-light)',
-              borderRadius: '50%',
-              margin: '0 auto 1rem',
-              display: 'flex',
+              display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
+              margin: '0 auto 1rem',
+              fontFamily: 'var(--font-display), Georgia, serif',
+              fontStyle: 'italic',
               fontSize: '28px',
+              color: 'var(--accent)',
+              borderBottom: '1px solid var(--accent)',
+              paddingBottom: '0.3rem',
+              minWidth: '2.2ch',
             }}>
               {step.number}
             </div>

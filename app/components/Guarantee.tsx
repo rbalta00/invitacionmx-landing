@@ -4,9 +4,9 @@ export default function Guarantee() {
       maxWidth: '1000px',
       margin: '4rem auto',
       padding: '2rem',
-      background: 'linear-gradient(135deg, #EEEDFE 0%, #F0E6FF 100%)',
+      background: 'linear-gradient(135deg, #F3E6D3 0%, #F8ECD9 100%)',
       borderRadius: '12px',
-      border: '2px solid #AFA9EC',
+      border: '2px solid #DDBE86',
     }}>
       <div style={{
         textAlign: 'center',

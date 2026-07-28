@@ -5,16 +5,16 @@
 }
 
 :root {
-  --primary: #7F77DD;
-  --primary-dark: #3C3489;
-  --accent: #D85A30;
-  --text-primary: #1a1a1a;
-  --text-secondary: #666666;
-  --text-muted: #999999;
-  --bg-light: #fafaf9;
-  --bg-white: #ffffff;
-  --border: #e5e5e5;
-  --surface-light: #EEEDFE;
+  --primary: #8B2942;
+  --primary-dark: #4A1226;
+  --accent: #B98A32;
+  --text-primary: #2E2A26;
+  --text-secondary: #6B5F55;
+  --text-muted: #93887D;
+  --bg-light: #FAF3EA;
+  --bg-white: #FFFDF9;
+  --border: #EDE1D2;
+  --surface-light: #F3E6D3;
   --success: #1D9E75;
 }
 
@@ -39,8 +39,10 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), Georgia, 'Iowan Old Style', serif;
   font-weight: 500;
   line-height: 1.2;
+  text-wrap: balance;
 }
 
 h1 {

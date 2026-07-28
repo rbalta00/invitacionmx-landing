@@ -2,6 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react';
 
+function Star() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)" style={{ marginRight: '2px' }}>
+      <path d="M12 2l2.9 6.9L22 9.6l-5.4 4.9L18.2 22 12 18l-6.2 4 1.6-7.5L2 9.6l7.1-0.7z" />
+    </svg>
+  );
+}
+
 function Avatar({ slug, author }: { slug: string; author: string }) {
   const [photoOk, setPhotoOk] = useState(true);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -101,11 +109,10 @@ export default function Testimonials() {
           >
             <Avatar slug={testimonial.slug} author={testimonial.author} />
             <div style={{
-              color: 'var(--accent)',
-              fontSize: '18px',
+              display: 'flex',
               marginBottom: '0.5rem',
             }}>
-              {'⭐'.repeat(testimonial.rating)}
+              {Array.from({ length: testimonial.rating }).map((_, i) => <Star key={i} />)}
             </div>
             <p style={{
               fontSize: '14px',
