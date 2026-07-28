@@ -2,11 +2,11 @@ export default function FAQ() {
   const faqs = [
     {
       question: '¿Cuánto tiempo tarda?',
-      answer: 'Depende de tu plan. Básicamente tú envías tus datos y fotos, y yo entrego la invitación en 2-3 días hábiles.',
+      answer: 'Tú envías tus datos y fotos, y yo entrego tu invitación en 24-48 horas, en cualquier paquete.',
     },
     {
       question: '¿Puedo cambiar cosas después?',
-      answer: 'Claro. En Plan Premium tienes 2 cambios incluidos. En Deluxe, cambios ilimitados.',
+      answer: 'Claro. Tienes 2 rondas de ajustes sin costo dentro de los primeros 7 días después de la entrega. Pasado ese periodo, cada ajuste adicional tiene un costo de $99-150 MXN.',
     },
     {
       question: '¿Funciona en todos los celulares?',
