@@ -25,7 +25,7 @@ export default function Features() {
     { icon: ICONS.musica, title: 'Música Personalizada', description: 'Elige la canción perfecta para cuando se abra tu invitación.' },
     { icon: ICONS.apertura, title: 'Animación de Apertura', description: 'Sorprende a tus huéspedes con una animación especial al abrir.' },
     { icon: ICONS.galeria, title: 'Galería de Fotos', description: 'Sube hasta 14 fotos tuyas en alta calidad. Se ven perfectas.' },
-    { icon: ICONS.confirmar, title: 'Confirmar Asistencia', description: 'Tus huéspedes confirman si van directo desde la invitación.' },
+    { icon: ICONS.confirmar, title: 'Confirmar Asistencia', description: 'Tus huéspedes confirman si van directo desde la invitación, y tú ves el conteo en vivo sin llevar la cuenta a mano.' },
     { icon: ICONS.regalos, title: 'Lista de Regalos', description: 'Tus huéspedes pueden ver y comprometerse con los regalos.' },
     { icon: ICONS.mapa, title: 'Mapa de Ubicación', description: 'Muestra ceremonia y recepción con GPS integrado.' },
     { icon: ICONS.reloj, title: 'Cuenta Regresiva', description: 'Los días, horas y minutos para el grande día.' },

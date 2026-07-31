@@ -22,7 +22,7 @@ export default function FAQ() {
     },
     {
       question: '¿Puedo descargar la invitación?',
-      answer: 'Sí, en Premium y Deluxe. Tienes la opción de descargar como PDF.',
+      answer: 'Sí. Viene incluido sin costo extra en el paquete Deluxe; en Básico y Premium está disponible como complemento a la carta.',
     },
   ];
 

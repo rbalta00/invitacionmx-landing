@@ -7,13 +7,13 @@ export default function HowItWorks() {
     },
     {
       number: '02',
-      title: 'Yo Creo tu Invitación',
-      description: 'Diseño tu invitación con tus fotos, datos y detalles especiales.',
+      title: 'Llenas tus Datos',
+      description: 'Te mando tu link personal para que captures fecha, ceremonia, itinerario y subas tus fotos directo — sin escribir todo por WhatsApp.',
     },
     {
       number: '03',
       title: 'La Revisas',
-      description: 'Te mando una vista previa para que la revises y pidas los ajustes que necesites.',
+      description: 'Con tus datos armo tu invitación y te mando una vista previa para que la revises y pidas los ajustes que necesites.',
     },
     {
       number: '04',

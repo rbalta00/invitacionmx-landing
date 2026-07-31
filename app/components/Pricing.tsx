@@ -42,7 +42,7 @@ export default function Pricing() {
       features: [
         '8 fotos en galería',
         '12 temas a elegir',
-        'Descargar PDF de la invitación',
+        'Link compartible por WhatsApp',
       ],
       seccionesTitulo: 'Todo lo del Básico, más:',
       secciones: [
@@ -64,6 +64,7 @@ export default function Pricing() {
       seccionesTitulo: 'Todo lo del Premium, más:',
       secciones: [
         'Pases digitales personalizados por familia (nombre + número de invitados asignados)',
+        'Descarga en PDF incluida sin costo extra',
       ],
     },
   ];
