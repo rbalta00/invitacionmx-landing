@@ -33,6 +33,7 @@ export default function Pricing() {
         'Confirmación de asistencia (RSVP)',
         'Mensaje de cierre',
       ],
+      addOn: 'Pases digitales personalizados por familia disponibles como complemento (+$150 MXN)',
     },
     {
       name: 'Premium',
@@ -51,6 +52,7 @@ export default function Pricing() {
         'Hashtag de Instagram',
         'Agregar evento a calendario',
       ],
+      addOn: 'Pases digitales personalizados por familia disponibles como complemento (+$180 MXN)',
     },
     {
       name: 'Deluxe',
@@ -185,6 +187,17 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
+              {plan.addOn && (
+                <p style={{
+                  fontSize: '12px',
+                  fontStyle: 'italic',
+                  textAlign: 'left',
+                  marginBottom: '1.5rem',
+                  color: plan.isPopular ? 'rgba(255,255,255,0.75)' : 'var(--text-secondary)',
+                }}>
+                  + {plan.addOn}
+                </p>
+              )}
               <button
                 onClick={() => handlePlanClick(plan.name, plan.price)}
                 style={{

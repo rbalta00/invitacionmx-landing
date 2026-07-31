@@ -17,7 +17,7 @@ export default function Guarantee() {
           marginBottom: '1rem',
           color: 'var(--primary-dark)',
         }}>
-          100% Satisfecho o Te Devolvemos el Dinero
+          Ajustamos Hasta que Quede Perfecta
         </h2>
         <p style={{
           fontSize: '16px',
@@ -25,7 +25,7 @@ export default function Guarantee() {
           margin: 0,
           lineHeight: '1.6',
         }}>
-          Si tu invitación no te encanta, devolvemos tu dinero sin preguntas. Así de seguro estamos de nuestro trabajo.
+          Antes de comprometerte, puedes ver una muestra con tus propios datos. Y una vez que compras, tienes 2 rondas de ajustes sin costo para dejarla exactamente como la quieres.
         </p>
       </div>
     </section>

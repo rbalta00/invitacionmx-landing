@@ -24,6 +24,10 @@ export default function FAQ() {
       question: '¿Puedo descargar la invitación?',
       answer: 'Sí. Viene incluido sin costo extra en el paquete Deluxe; en Básico y Premium está disponible como complemento a la carta.',
     },
+    {
+      question: '¿Puedo ver cómo se vería antes de comprar?',
+      answer: 'Sí. Te puedo mandar una muestra de tu invitación real, con tus datos, para que la veas antes de comprometerte a comprar — vigente por 5 días.',
+    },
   ];
 
   return (
