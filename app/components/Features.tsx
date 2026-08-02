@@ -18,6 +18,8 @@ const ICONS = {
   reloj: 'M12 22a10 10 0 100-20 10 10 0 000 20zM12 6v6l4 2',
   vestimenta: 'M8 4l4 2 4-2 3 4-3 2v10H8V10L5 8z',
   movil: 'M7 3h10a1 1 0 011 1v16a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1zM11 18h2',
+  pases: 'M4 7a2 2 0 012-2h12a2 2 0 012 2v3a2 2 0 000 4v3a2 2 0 01-2 2H6a2 2 0 01-2-2v-3a2 2 0 000-4V7z',
+  pdf: 'M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z M14 2v6h6 M12 11v6 M9.5 14.5l2.5 2.5 2.5-2.5',
 };
 
 export default function Features() {
@@ -25,11 +27,13 @@ export default function Features() {
     { icon: ICONS.musica, title: 'Música Personalizada', description: 'Elige la canción perfecta para cuando se abra tu invitación.' },
     { icon: ICONS.apertura, title: 'Animación de Apertura', description: 'Sorprende a tus huéspedes con una animación especial al abrir.' },
     { icon: ICONS.galeria, title: 'Galería de Fotos', description: 'Sube hasta 14 fotos tuyas en alta calidad. Se ven perfectas.' },
+    { icon: ICONS.pases, title: 'Pases Personalizados por Familia', description: 'Cada familia recibe su propio link con su nombre y número de invitados asignado — tú controlas exactamente quién entra.' },
     { icon: ICONS.confirmar, title: 'Confirmar Asistencia', description: 'Tus huéspedes confirman si van directo desde la invitación, y tú ves el conteo en vivo sin llevar la cuenta a mano.' },
     { icon: ICONS.regalos, title: 'Mesa de Regalos', description: 'Tus huéspedes ven la mesa de regalos y los datos bancarios, con un botón para copiar la CLABE sin batallar.' },
     { icon: ICONS.mapa, title: 'Mapa de Ubicación', description: 'Muestra ceremonia y recepción con GPS integrado.' },
     { icon: ICONS.reloj, title: 'Cuenta Regresiva', description: 'Los días, horas y minutos para el grande día.' },
     { icon: ICONS.vestimenta, title: 'Código de Vestimenta', description: 'Sugiere un color para que todos luzcan coordinados.' },
+    { icon: ICONS.pdf, title: 'Descarga en PDF de Regalo', description: 'Además del link interactivo, te llevas un PDF de recuerdo — no es solo digital, es algo que puedes conservar.' },
     { icon: ICONS.movil, title: '100% Mobile', description: 'Se ve perfecto en cualquier celular, tablet o computadora.' },
   ];
 

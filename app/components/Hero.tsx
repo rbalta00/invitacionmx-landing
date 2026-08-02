@@ -54,7 +54,7 @@ export default function Hero() {
             marginBottom: '1rem',
             color: 'var(--primary-dark)',
           }}>
-            Invitaciones XV Profesionales, Hechas por Nosotros
+            Tu Invitación XV, Lista en 24-48 Horas
           </h1>
           <p style={{
             fontSize: '18px',
@@ -62,7 +62,7 @@ export default function Hero() {
             marginBottom: '2rem',
             lineHeight: '1.6',
           }}>
-            Tú eliges el tema, el paquete y las secciones que quieras incluir. Nosotros diseñamos tu invitación XV, te la mandamos a revisión y la ajustamos hasta que quede perfecta.
+            Elige entre 12 diseños con animaciones, música y cuenta regresiva — se siente como una app, no como una invitación genérica. Tú mandas tus datos y fotos desde un link fácil, nosotros armamos todo y la ajustamos hasta que quede perfecta.
           </p>
           <button
             onClick={handleWhatsApp}
