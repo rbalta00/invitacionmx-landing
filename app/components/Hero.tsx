@@ -62,7 +62,7 @@ export default function Hero() {
             marginBottom: '2rem',
             lineHeight: '1.6',
           }}>
-            Elige entre 12 diseños con animaciones, música y cuenta regresiva — se siente como una app, no como una invitación genérica. Tú mandas tus datos y fotos desde un link fácil, nosotros armamos todo y la ajustamos hasta que quede perfecta.
+            Elige entre 13 diseños con animaciones, música y cuenta regresiva — se siente como una app, no como una invitación genérica. Tú mandas tus datos y fotos desde un link fácil, nosotros armamos todo y la ajustamos hasta que quede perfecta.
           </p>
           <button
             onClick={handleWhatsApp}
