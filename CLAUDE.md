@@ -119,3 +119,10 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_id_here
 - [ ] Schema.org structured data
 - [ ] Video testimonials
 - [ ] Live chat widget
+
+## Publicar cambios (deploy)
+
+- Repo: `rbalta00/invitacionmx-landing`, rama `main`. Vercel: proyecto `invitacionmx-landing` -> https://www.invitamx.online.
+- **Deploy manual**: el `git push` solo actualiza GitHub; para que se vea en linea hay que correr `vercel --prod` aparte.
+- Atajo: `.\deploy.ps1 "mensaje"` en la raiz del repo hace `git add` + `commit` + `push` + `vercel --prod` en un solo paso.
+- Convencion con el usuario: cuando pida "guardar", "subir" o "publicar" este repo, correr el flujo completo sin preguntar el alcance (ver tambien `D:\repos-activos\SETUP.md` si existe esa carpeta).
