@@ -54,7 +54,7 @@ export default function Hero() {
             marginBottom: '1rem',
             color: 'var(--primary-dark)',
           }}>
-            Tu Invitación XV, Lista en 24-48 Horas
+            La Invitación XV que No Se Ve de Plantilla Gratis
           </h1>
           <p style={{
             fontSize: '18px',
@@ -62,7 +62,7 @@ export default function Hero() {
             marginBottom: '2rem',
             lineHeight: '1.6',
           }}>
-            Elige entre 13 diseños con animaciones, música y cuenta regresiva — se siente como una app, no como una invitación genérica. Tú mandas tus datos y fotos desde un link fácil, nosotros armamos todo y la ajustamos hasta que quede perfecta.
+            Olvídate de pelear con Canva o pagar de más por un diseñador. Nos mandas tus datos y fotos por WhatsApp, nosotros armamos tu invitación interactiva — con animaciones, música y cuenta regresiva — y te la entregamos lista en 24-48 horas, ajustada hasta que te encante.
           </p>
           <button
             onClick={handleWhatsApp}

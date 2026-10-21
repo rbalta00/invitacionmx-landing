@@ -17,7 +17,7 @@ export default function Guarantee() {
           marginBottom: '1rem',
           color: 'var(--primary-dark)',
         }}>
-          Ajustamos Hasta que Quede Perfecta
+          No Hay Sorpresas: La Ves Antes de Pagar
         </h2>
         <p style={{
           fontSize: '16px',
@@ -25,7 +25,7 @@ export default function Guarantee() {
           margin: 0,
           lineHeight: '1.6',
         }}>
-          Antes de comprometerte, puedes ver una muestra con tus propios datos. Y una vez que compras, tienes 2 rondas de ajustes sin costo para dejarla exactamente como la quieres.
+          Antes de comprometerte, te mando una muestra de tu invitación real, con tus propios datos, para que la veas tal cual quedaría. Y una vez que compras, tienes 2 rondas de ajustes sin costo para dejarla exactamente como la quieres.
         </p>
       </div>
     </section>

@@ -1,34 +1,40 @@
+'use client';
+
+import { useState } from 'react';
+
+const faqs = [
+  {
+    question: '¿Cuánto tiempo tarda?',
+    answer: 'Tú envías tus datos y fotos, y yo entrego tu invitación en 24-48 horas, en cualquier paquete.',
+  },
+  {
+    question: '¿Puedo cambiar cosas después?',
+    answer: 'Claro. Tienes 2 rondas de ajustes sin costo dentro de los primeros 7 días después de la entrega. Pasado ese periodo, cada ajuste adicional tiene un costo de $99-150 MXN.',
+  },
+  {
+    question: '¿Funciona en todos los celulares?',
+    answer: 'Sí, 100%. Se ve perfecto en iPhone, Android, tablet y computadora.',
+  },
+  {
+    question: '¿Qué pasa si no envío fotos?',
+    answer: 'No hay problema. Usamos fotos de ejemplo que se ven hermosas. Tú después cambias cuando quieras.',
+  },
+  {
+    question: '¿Hay soporte después?',
+    answer: 'Sí, te doy el link y te ayudo a compartirlo. Si hay dudas con tus huéspedes, yo te asesoro.',
+  },
+  {
+    question: '¿Puedo descargar la invitación?',
+    answer: 'Sí. Viene incluido sin costo extra en el paquete Deluxe; en Básico y Premium está disponible como complemento a la carta.',
+  },
+  {
+    question: '¿Puedo ver cómo se vería antes de comprar?',
+    answer: 'Sí. Te puedo mandar una muestra de tu invitación real, con tus datos, para que la veas antes de comprometerte a comprar — vigente por 5 días.',
+  },
+];
+
 export default function FAQ() {
-  const faqs = [
-    {
-      question: '¿Cuánto tiempo tarda?',
-      answer: 'Tú envías tus datos y fotos, y yo entrego tu invitación en 24-48 horas, en cualquier paquete.',
-    },
-    {
-      question: '¿Puedo cambiar cosas después?',
-      answer: 'Claro. Tienes 2 rondas de ajustes sin costo dentro de los primeros 7 días después de la entrega. Pasado ese periodo, cada ajuste adicional tiene un costo de $99-150 MXN.',
-    },
-    {
-      question: '¿Funciona en todos los celulares?',
-      answer: 'Sí, 100%. Se ve perfecto en iPhone, Android, tablet y computadora.',
-    },
-    {
-      question: '¿Qué pasa si no envío fotos?',
-      answer: 'No hay problema. Usamos fotos de ejemplo que se ven hermosas. Tú después cambias cuando quieras.',
-    },
-    {
-      question: '¿Hay soporte después?',
-      answer: 'Sí, te doy el link y te ayudo a compartirlo. Si hay dudas con tus huéspedes, yo te asesoro.',
-    },
-    {
-      question: '¿Puedo descargar la invitación?',
-      answer: 'Sí. Viene incluido sin costo extra en el paquete Deluxe; en Básico y Premium está disponible como complemento a la carta.',
-    },
-    {
-      question: '¿Puedo ver cómo se vería antes de comprar?',
-      answer: 'Sí. Te puedo mandar una muestra de tu invitación real, con tus datos, para que la veas antes de comprometerte a comprar — vigente por 5 días.',
-    },
-  ];
+  const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
     <section id="faq" style={{
@@ -50,26 +56,63 @@ export default function FAQ() {
           Preguntas Frecuentes
         </h2>
         <div>
-          {faqs.map((faq, idx) => (
-            <div key={idx} style={{ marginBottom: '1.5rem' }}>
-              <h3 style={{
-                fontSize: '16px',
-                fontWeight: 500,
-                marginBottom: '0.5rem',
-                color: 'var(--primary-dark)',
-              }}>
-                {faq.question}
-              </h3>
-              <p style={{
-                fontSize: '14px',
-                color: 'var(--text-secondary)',
-                margin: 0,
-                lineHeight: '1.6',
-              }}>
-                {faq.answer}
-              </p>
-            </div>
-          ))}
+          {faqs.map((faq, idx) => {
+            const isOpen = openIdx === idx;
+            return (
+              <div
+                key={idx}
+                style={{
+                  borderBottom: '1px solid var(--border)',
+                }}
+              >
+                <button
+                  onClick={() => setOpenIdx(isOpen ? null : idx)}
+                  aria-expanded={isOpen}
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    gap: '1rem',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: '1.1rem 0',
+                    textAlign: 'left',
+                  }}
+                >
+                  <span style={{
+                    fontSize: '16px',
+                    fontWeight: 500,
+                    color: 'var(--primary-dark)',
+                  }}>
+                    {faq.question}
+                  </span>
+                  <span style={{
+                    flexShrink: 0,
+                    fontSize: '20px',
+                    lineHeight: 1,
+                    color: 'var(--accent)',
+                    transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.2s',
+                  }}>
+                    +
+                  </span>
+                </button>
+                {isOpen && (
+                  <p style={{
+                    fontSize: '14px',
+                    color: 'var(--text-secondary)',
+                    margin: 0,
+                    paddingBottom: '1.25rem',
+                    lineHeight: '1.6',
+                  }}>
+                    {faq.answer}
+                  </p>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
