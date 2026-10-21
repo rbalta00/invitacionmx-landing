@@ -11,7 +11,7 @@ const playfairDisplay = Playfair_Display({
 
 export const metadata: Metadata = {
   title: 'Invitamx - Invitaciones XV Profesionales | Diseña en Minutos',
-  description: 'Crea invitaciones XV hermosas y personalizadas en minutos. 12 temas elegantes, lista de regalos, confirmación de asistencia. Comparte por WhatsApp.',
+  description: 'Crea invitaciones XV hermosas y personalizadas en minutos. 13 temas elegantes, lista de regalos, confirmación de asistencia. Comparte por WhatsApp.',
   keywords: 'invitaciones XV, invitaciones quinceañera, invitaciones digitales, diseño XV, personalizado',
   metadataBase: new URL('https://invitamx.online'),
   alternates: {

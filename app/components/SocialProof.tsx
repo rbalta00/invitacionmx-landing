@@ -8,7 +8,7 @@ export default function SocialProof() {
       fontSize: '14px',
     }}>
       <p style={{ margin: 0, letterSpacing: '0.01em' }}>
-        <strong style={{ color: 'var(--accent)' }}>150+</strong> invitaciones creadas &nbsp;·&nbsp; <strong style={{ color: 'var(--accent)' }}>4.9/5</strong> calificación promedio &nbsp;·&nbsp; Garantía <strong style={{ color: 'var(--accent)' }}>100%</strong> satisfacción
+        Entrega en <strong style={{ color: 'var(--accent)' }}>24-48 horas</strong> &nbsp;·&nbsp; <strong style={{ color: 'var(--accent)' }}>2 rondas</strong> de ajustes incluidas &nbsp;·&nbsp; Muestra <strong style={{ color: 'var(--accent)' }}>gratis</strong> antes de comprar
       </p>
     </div>
   );
