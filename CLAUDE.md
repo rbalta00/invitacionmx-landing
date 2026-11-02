@@ -139,8 +139,8 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_id_here
 ## Publicar cambios (deploy)
 
 - Repo: `rbalta00/invitacionmx-landing`, rama `main`. Vercel: proyecto `invitacionmx-landing` -> https://www.invitamx.online.
-- **Deploy manual**: el `git push` solo actualiza GitHub; para que se vea en linea hay que correr `vercel --prod` aparte.
-- Atajo: `.\deploy.ps1 "mensaje"` en la raiz del repo hace `git add` + `commit` + `push` + `vercel --prod` en un solo paso.
+- **Auto-deploy conectado a GitHub** (confirmado 2026-11-02): un `git push` a `main` ya dispara el deploy a produccion solo, no hace falta correr `vercel --prod` aparte. La nota anterior de "deploy manual" quedo desactualizada.
+- `.\deploy.ps1 "mensaje"` sigue sirviendo para el commit+push, pero el paso `vercel --prod` dentro del script puede fallar con "Not authorized" si el CLI local de Vercel esta logueado con una cuenta sin acceso al team del proyecto (`team_jIutM0AoPJs93za5xqLWmY2E`, visto con `vercel teams ls` solo trae `isaacrbs-projects`) — no es un problema real, el deploy ya paso via GitHub antes de que ese paso corra. Si se quiere confirmar, revisar `list_deployments` del MCP de Vercel o la propia vercel.com en vez de confiar en el output del CLI local.
 - Convencion con el usuario: cuando pida "guardar", "subir" o "publicar" este repo, correr el flujo completo sin preguntar el alcance (ver tambien `D:\repos-activos\SETUP.md` si existe esa carpeta).
 
 ## Rol: Encargado de marketing de InvitaMX
