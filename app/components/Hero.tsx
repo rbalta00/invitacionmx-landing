@@ -86,46 +86,90 @@ export default function Hero() {
         </div>
 
         {videoOk && (
-          <div style={{
-            maxWidth: '380px',
-            margin: '0 auto',
-            borderRadius: '16px',
-            boxShadow: '0 20px 40px rgba(74, 18, 38, 0.22)',
-            overflow: 'hidden',
-          }}>
-            <video
-              ref={videoRef}
-              src="/videos/hero-demo.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster="/images/hero/hero-invitation.jpg"
-              style={{
-                width: '100%',
-                display: 'block',
-              }}
-            />
+          <div style={{ maxWidth: '300px', margin: '0 auto' }}>
+            <div style={{
+              position: 'relative',
+              background: 'var(--primary-dark)',
+              borderRadius: '44px',
+              padding: '14px',
+              boxShadow: '0 20px 40px rgba(74, 18, 38, 0.3)',
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '14px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '90px',
+                height: '22px',
+                background: 'var(--primary-dark)',
+                borderRadius: '0 0 16px 16px',
+                zIndex: 2,
+              }} />
+              <div style={{
+                borderRadius: '30px',
+                overflow: 'hidden',
+                aspectRatio: '9 / 18',
+                background: '#FAF3EA',
+              }}>
+                <video
+                  ref={videoRef}
+                  src="/videos/hero-demo.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  poster="/images/hero/hero-invitation.jpg"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    display: 'block',
+                  }}
+                />
+              </div>
+            </div>
           </div>
         )}
 
         {!videoOk && imageOk && (
-          <div style={{
-            maxWidth: '380px',
-            margin: '0 auto',
-            borderRadius: '16px',
-            boxShadow: '0 20px 40px rgba(74, 18, 38, 0.22)',
-            overflow: 'hidden',
-          }}>
-            <img
-              ref={imgRef}
-              src="/images/hero/hero-invitation.jpg"
-              alt="Ejemplo de invitación XV"
-              style={{
-                width: '100%',
-                display: 'block',
-              }}
-            />
+          <div style={{ maxWidth: '300px', margin: '0 auto' }}>
+            <div style={{
+              position: 'relative',
+              background: 'var(--primary-dark)',
+              borderRadius: '44px',
+              padding: '14px',
+              boxShadow: '0 20px 40px rgba(74, 18, 38, 0.3)',
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '14px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '90px',
+                height: '22px',
+                background: 'var(--primary-dark)',
+                borderRadius: '0 0 16px 16px',
+                zIndex: 2,
+              }} />
+              <div style={{
+                borderRadius: '30px',
+                overflow: 'hidden',
+                aspectRatio: '9 / 18',
+                background: '#FAF3EA',
+              }}>
+                <img
+                  ref={imgRef}
+                  src="/images/hero/hero-invitation.jpg"
+                  alt="Ejemplo de invitación XV"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    display: 'block',
+                  }}
+                />
+              </div>
+            </div>
           </div>
         )}
       </div>
