@@ -1,0 +1,153 @@
+================================================================
+INVITAMX — 3 ANUNCIOS NUEVOS (segunda tanda, 2026-11-02)
+================================================================
+Generados para variar ángulo/avatar/formato respecto a los 4 de la
+primera tanda (D:\InvitaMX\invitamx-facebook-campaign.html, ver
+ventas/registro-anuncios.txt). Todos los datos (precios, temas,
+políticas) están confirmados contra data.ts del generador y el
+manual de usuario — no se inventó nada.
+
+Mismo setup de campaña que la tanda anterior: objetivo Interacción
+-> destino Mensajes (WhatsApp), no Tráfico. CTA = "Enviar mensaje".
+Antes de publicar: confirma que NEXT_PUBLIC_WHATSAPP_NUMBER en
+Vercel es el número correcto y que la página de Facebook conectada
+es la de InvitaMX.
+
+----------------------------------------------------------------
+ANUNCIO 5 — "Que sea SU invitación, no una genérica"
+----------------------------------------------------------------
+Ángulo: identidad propia / personalización — la quinceañera quiere
+que la invitación se vea "a su estilo", no al gusto que mamá elegiría
+sola. Ataca un dolor distinto a los 4 anteriores (ninguno hablaba
+directo con/para la quinceañera).
+
+Avatar: la propia quinceañera (o la mamá comprando "a gusto de la
+hija") — adolescente con opinión fuerte sobre estética, influye la
+decisión de compra aunque quien pague sea el familiar.
+
+Headline:
+  Tu invitación de XV, a TU estilo 🌸
+
+Texto principal:
+  13 diseños -- del elegante clásico al neón moderno -- o uno 100%
+  personalizado con los colores y la tipografía que tú elijas.
+  Cuenta regresiva, música y animación de apertura incluidas. Desde
+  $499, lista en 24-48 horas.
+
+Descripción (texto secundario):
+  ¿No te convence ninguno del catálogo? Pide el tema Personalizado y
+  lo armamos a tu gusto.
+
+CTA (botón): Enviar mensaje
+
+Especificaciones:
+  Formato: Video vertical corto (9:16, para Reels/Stories, 10-15s)
+  Recurso visual: montaje rápido de 3 temas con estética más moderna
+    (Ciber Cyber Neon, XV Coquette Luxe, Aurora Boreal) + 1 frame del
+    selector de paleta del tema Personalizado
+  Producto: tema Personalizado + temas modernos del catálogo
+  Destino: Mensajes de WhatsApp
+  Público sugerido: ampliar el rango de edad hacia abajo en el
+    conjunto de anuncios (ej. 16-24 además de 30-55), ya que el
+    video está hablándole directo a la quinceañera, no solo a quien
+    paga
+
+----------------------------------------------------------------
+ANUNCIO 6 — "Deja de cotizar de más"
+----------------------------------------------------------------
+Ángulo: ancla de precio contra diseñador freelance -- distinto al
+ángulo de "rapidez" de la tanda anterior (anuncio 2). Aquí se
+compara directo contra lo que cuesta un diseñador suelto.
+
+Avatar: quien ya pidió cotización con un diseñador freelance (o
+en Fiverr/una agencia chica) y se espantó con el precio o el tiempo
+de entrega.
+
+Headline:
+  ¿Ya te cotizaron $3,000 por tu invitación de XV? 😳
+
+Texto principal:
+  Un diseñador freelance cobra $2,000-5,000 MXN y tarda días o
+  semanas -- y cada cambio extra suele tener costo aparte. Con
+  Invitamx tienes diseño profesional (13 temas), lista en 24-48
+  horas, desde $499, con 2 rondas de ajustes incluidas sin costo.
+
+Descripción (texto secundario):
+  Mismo resultado profesional, una fracción del precio y del tiempo.
+
+CTA (botón): Enviar mensaje
+
+Especificaciones:
+  Formato: Imagen estática, tabla comparativa de 2 columnas
+    ("Diseñador freelance" vs. "Invitamx") -- mismo contenido que ya
+    existe en la sección "¿Por Qué Invitamx?" de la landing
+    (app/components/WhyUs.tsx), reutilizar ese diseño como base del
+    creativo
+  Producto: Básico como gancho de entrada ($499), mencionar que
+    Premium/Deluxe existen para quien quiere más secciones
+  Destino: Mensajes de WhatsApp
+  Nota: no mencionar nombres de plataformas de freelance específicas
+    (Fiverr, Workana, etc.) en el anuncio -- el rango $2,000-5,000 ya
+    está confirmado en app/components/WhyUs.tsx, no hace falta citar
+    la fuente
+
+----------------------------------------------------------------
+ANUNCIO 7 — "Controla quién entra a tu fiesta"
+----------------------------------------------------------------
+Ángulo: control de acceso / evitar colados -- dolor de capacidad del
+salón y presupuesto del banquete (pagado por invitado), no de diseño
+ni de logística general de RSVP (eso ya lo cubrió el anuncio 4).
+
+Avatar: quien ya cerró número de invitados por capacidad del salón o
+presupuesto del banquete, y le preocupa que lleguen personas no
+invitadas ("colados") que compliquen el conteo o el gasto.
+
+Headline:
+  Sabe exactamente quién entra a tu fiesta de XV 🎟️
+
+Texto principal:
+  Cada familia invitada recibe su propio link con su nombre y el
+  número de pases que le asignaste -- y en la puerta, un código QR
+  confirma la entrada al instante, sin listas en papel ni
+  adivinanzas. Incluido sin costo extra en el paquete Deluxe.
+
+Descripción (texto secundario):
+  Control real de acceso, no solo una invitación bonita.
+
+CTA (botón): Enviar mensaje
+
+Especificaciones:
+  Formato: Carrusel (3 tarjetas) o video corto (8-10s) mostrando: 1)
+    el link personalizado de una familia con su nombre y pases, 2) el
+    QR del pase, 3) la pantalla de confirmación al escanearlo en la
+    puerta
+  Producto: Deluxe (pases incluidos) -- mencionar que el complemento
+    "Control de Acceso QR" (+$150 MXN) requiere tener pases activo,
+    y que en Básico/Premium los pases son à la carte (+$150/+$180
+    MXN)
+  Destino: Mensajes de WhatsApp
+  Público sugerido: mismo 30-55 años, pero se puede probar
+    segmentando por "organizador de eventos" o intereses de salones
+    de fiesta/banquetes, ya que el dolor es más de logística de
+    evento que de diseño
+
+----------------------------------------------------------------
+RECOMENDACIÓN DE EJECUCIÓN
+----------------------------------------------------------------
+- Córrelos como una SEGUNDA tanda, no reemplaces los 4 anteriores si
+  no se han publicado todavía -- primero hay que saber cómo les fue
+  a esos para no estar probando 7 ángulos a ciegas al mismo tiempo.
+- Si los 4 anteriores ya corrieron: pausa el que tenga peor
+  costo-por-conversación antes de sumar estos 3, para no diluir
+  presupuesto entre demasiados anuncios a la vez.
+- Mismo presupuesto inicial de referencia: $100-150 MXN/día repartido
+  entre los anuncios activos, subir solo lo que traiga conversaciones
+  reales de WhatsApp (no solo clics).
+- El anuncio 5 (dirigido a la quinceañera) es el más experimental de
+  los tres -- si el conjunto de anuncios ya apunta solo a 30-55 años,
+  conviene correrlo en un conjunto de anuncios aparte con rango de
+  edad más amplio, no mezclado con los demás.
+- Pendiente de confirmar con el usuario antes de publicar: ¿ya se
+  corrieron los 4 anuncios de la primera tanda? ¿qué resultado dieron
+  (conversaciones, anticipos pagados)? Sin eso, el registro no se
+  puede actualizar con resultados reales todavía.

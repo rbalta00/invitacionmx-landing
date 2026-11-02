@@ -26,7 +26,7 @@ export default function Features() {
   const features = [
     { icon: ICONS.musica, title: 'Música Personalizada', description: 'Elige la canción perfecta para cuando se abra tu invitación.' },
     { icon: ICONS.apertura, title: 'Animación de Apertura', description: 'Sorprende a tus huéspedes con una animación especial al abrir.' },
-    { icon: ICONS.galeria, title: 'Galería de Fotos', description: 'Sube hasta 14 fotos tuyas en alta calidad. Se ven perfectas.' },
+    { icon: ICONS.galeria, title: 'Galería de Fotos', description: 'Sube tus fotos favoritas en alta calidad -- hasta 14 en el paquete Deluxe. Se ven perfectas.' },
     { icon: ICONS.pases, title: 'Pases Personalizados por Familia', description: 'Cada familia recibe su propio link con su nombre y número de invitados asignado — tú controlas exactamente quién entra.' },
     { icon: ICONS.confirmar, title: 'Confirmar Asistencia', description: 'Tus huéspedes confirman si van directo desde la invitación, y tú ves el conteo en vivo sin llevar la cuenta a mano.' },
     { icon: ICONS.regalos, title: 'Mesa de Regalos', description: 'Tus huéspedes ven la mesa de regalos y los datos bancarios, con un botón para copiar la CLABE sin batallar.' },

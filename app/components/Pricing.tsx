@@ -33,7 +33,7 @@ export default function Pricing() {
         'Confirmación de asistencia (RSVP)',
         'Mensaje de cierre',
       ],
-      addOn: 'Pases digitales personalizados por familia disponibles como complemento (+$150 MXN)',
+      addOn: 'Pases digitales personalizados por familia disponibles como complemento (+$150 MXN, hasta 10 familias; +$15-20 MXN por familia extra)',
     },
     {
       name: 'Premium',
@@ -52,7 +52,7 @@ export default function Pricing() {
         'Hashtag de Instagram',
         'Agregar evento a calendario',
       ],
-      addOn: 'Pases digitales personalizados por familia disponibles como complemento (+$180 MXN)',
+      addOn: 'Pases digitales personalizados por familia disponibles como complemento (+$180 MXN, hasta 20 familias; +$15-20 MXN por familia extra)',
     },
     {
       name: 'Deluxe',
@@ -61,11 +61,11 @@ export default function Pricing() {
       features: [
         '14 fotos en galería',
         '13 temas a elegir',
-        'Soporte prioritario',
+        'Pases y PDF incluidos sin costo extra',
       ],
       seccionesTitulo: 'Todo lo del Premium, más:',
       secciones: [
-        'Pases digitales personalizados por familia (nombre + número de invitados asignados)',
+        'Pases digitales personalizados por familia (nombre + número de invitados asignados), incluido sin costo hasta 40 familias',
         'Descarga en PDF incluida sin costo extra',
       ],
     },

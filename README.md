@@ -46,16 +46,21 @@ app/
 ├── components/          # Componentes de la landing
 │   ├── Header.tsx
 │   ├── Hero.tsx
+│   ├── SocialProof.tsx
+│   ├── WhyUs.tsx
 │   ├── HowItWorks.tsx
 │   ├── Themes.tsx
 │   ├── Features.tsx
 │   ├── Pricing.tsx
-│   ├── Testimonials.tsx
 │   ├── FAQ.tsx
 │   ├── Guarantee.tsx
 │   ├── FinalCTA.tsx
 │   ├── Footer.tsx
+│   ├── FloatingWhatsApp.tsx
+│   ├── Analytics.tsx
 │   └── PixelTracker.tsx
+├── privacidad/page.tsx  # Aviso de privacidad
+├── terminos/page.tsx    # Términos y condiciones
 ├── layout.tsx           # Layout principal
 ├── page.tsx            # Página principal
 └── globals.css         # Estilos globales

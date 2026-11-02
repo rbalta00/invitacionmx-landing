@@ -1,0 +1,76 @@
+================================================================
+REGISTRO DE ANUNCIOS PROBADOS — INVITAMX
+================================================================
+Este archivo lleva el historial de qué ángulos, avatares, formatos
+y productos/temas ya se han usado en anuncios, para no repetirlos.
+Antes de generar anuncios nuevos (skill /anuncios), revisar esta
+lista completa primero.
+
+Columna "Estado": generado | usado | descartado
+Columna "Resultado": lo que el usuario reporte (clics, conversaciones
+de WhatsApp, cuántas se convirtieron en anticipo pagado...) una vez
+que el anuncio se corrió de verdad en Meta Ads Manager.
+
+Fecha       | Ángulo                                  | Avatar/Público                                            | Formato                          | Producto/Tema                         | Estado     | Resultado                   | Archivo fuente
+------------|-------------------------------------------|--------------------------------------------------------------|-------------------------------------|-------------------------------------------|------------|------------------------------|--------------------------------
+2026-09-16  | Vergüenza de lo casero/improvisado        | Mamá/familiar organizador, le importa la imagen frente a la familia extendida | Imagen estática                  | Cualquier paquete (gancho genérico)       | generado   | (pendiente, no reportado)   | D:\InvitaMX\invitamx-facebook-campaign.html
+2026-09-16  | Rapidez + variedad sin complicarse        | Quien ya anda contra el tiempo, faltan pocas semanas          | Video corto AIDA (13-15s)         | Todos los paquetes                        | generado   | (pendiente, no reportado)   | D:\InvitaMX\invitamx-facebook-campaign.html
+2026-09-16  | Variedad real antes de decidir             | Quien compara opciones (imprenta, otra página, esta)          | Carrusel (5 tarjetas)              | Catálogo completo (13 temas)              | generado   | (pendiente, no reportado)   | D:\InvitaMX\invitamx-facebook-campaign.html
+2026-09-16  | Delegar la logística (RSVP + pases)        | Quien organiza sola/o, se siente abrumada/o con lista/confirmaciones | Imagen estática (screenshot RSVP) | Premium/Deluxe                            | generado   | (pendiente, no reportado)   | D:\InvitaMX\invitamx-facebook-campaign.html
+2026-11-02  | Identidad propia / "que sea SU invitación" | La quinceañera misma influye la compra (no solo mamá decide)  | Video vertical (Reels/Stories)     | Tema Personalizado + temas modernos (Ciber Cyber Neon, XV Coquette Luxe, Aurora Boreal) | generado | (pendiente, no reportado) | ventas/anuncios-2026-11-02.txt
+2026-11-02  | Ancla de precio vs. diseñador freelance    | Ya cotizó con diseñador/freelancer y se espantó con el precio | Imagen estática (tabla comparativa) | Básico como entrada ($499)                | generado   | (pendiente, no reportado)   | ventas/anuncios-2026-11-02.txt
+2026-11-02  | Control de acceso / evitar colados         | Capacidad de salón limitada, le preocupan los colados          | Carrusel o video corto (QR en puerta) | Deluxe + complemento Control de Acceso QR | generado   | (pendiente, no reportado)   | ventas/anuncios-2026-11-02.txt
+
+DESCARTADOS: ninguno todavía.
+
+================================================================
+CONTEXTO DEL NEGOCIO (no inventar fuera de esto sin confirmar)
+================================================================
+- Producto real: generador de invitaciones digitales de XV años,
+  panel en administradorinvitamx.vercel.app (repo
+  C:\Users\isaacr\repos\administradorinvitamx). La landing que
+  capta leads es este repo (invitacionmx-landing ->
+  https://www.invitamx.online), con todos los CTA hacia WhatsApp.
+- Paquetes y precios confirmados (data.ts del generador + manual de
+  usuario D:\InvitaMX\invitamx-manual-usuario.html, 2026-11-02):
+  Básico $499 MXN (4 fotos) | Premium $799 MXN (8 fotos, agrega
+  Familia/Padrinos, Mesa de Regalos+datos bancarios, Hashtag IG,
+  Agregar a calendario) | Deluxe $1,199 MXN (14 fotos, pases
+  personalizados y PDF de regalo incluidos sin costo extra).
+- 13 temas de diseño reales (Dorado Clásico, Vuelo de Mariposas,
+  Floral Acuarela, Místico Celestial, Eucalipto Botánico, Glam Rose
+  Oro, Rustique Boho Chic, Princesa Elegante, Mármol & Oro
+  Geométrico, Ciber Cyber Neon, XV Coquette Listones Rose, XV
+  Coquette Luxe, Aurora Boreal) + 1 tema "Personalizado" (a la
+  medida, con paleta de colores base a elegir: Dorado, Lila
+  Mariposa, Rosa Acuarela, Verde Botánico, Rosa Glam, Terracota
+  Boho, Rosa Coquette o Neutro).
+- Entrega en 24-48 horas. 2 rondas de ajustes gratis dentro de los
+  primeros 7 días después de la entrega; después, $99-150 MXN por
+  ajuste adicional. Muestra de la invitación real (con los datos del
+  cliente) antes de comprometerse a comprar, vigente 5 días.
+- Pases personalizados por familia (link propio con nombre + número
+  de invitados asignados): incluido sin costo en Deluxe (hasta 40
+  familias, +$15-20 MXN por familia extra), complemento à la carte
+  +$150 MXN en Básico (hasta 10 familias) o +$180 MXN en Premium
+  (hasta 20 familias), mismo +$15-20 MXN extra arriba del tope.
+- Control de Acceso QR (código QR por pase para registrar entrada en
+  la puerta): complemento aparte +$150 MXN plano, requiere tener
+  pases activo primero.
+- Pago: 50% de anticipo para reservar fecha, 50% restante contra
+  entrega del link final. Sin pasarela de pago en línea — todo
+  manual por WhatsApp/transferencia/Mercado Pago o PayPal.me
+  generado aparte por el admin.
+- NO prometer en copy: pasarela de pago en línea (el cliente no
+  "compra solo" con tarjeta), app descargable con notificaciones
+  push, confirmación de RSVP por SMS/email (depende de WhatsApp).
+- Sin testimonios reales/verificados todavía (cero clientes con
+  testimonio confirmado al 2026-11-02) — no inventar ninguno. Cuando
+  haya 2-3 casos reales, ahí sí vale un anuncio de testimonio (ya
+  queda anotado como idea pendiente en
+  D:\InvitaMX\invitamx-facebook-campaign.html, "Semana 3").
+- Público ya usado: mamás/familiares organizando la fiesta de XV,
+  30-55 años, México. Destino de campaña: Interacción -> Mensajes de
+  WhatsApp (no Tráfico), número en NEXT_PUBLIC_WHATSAPP_NUMBER
+  (configurado en Vercel, no en el repo).
+- Presupuesto de referencia usado antes: $100-150 MXN/día inicial.

@@ -17,30 +17,46 @@ Single-page landing focused on conversion to WhatsApp leads. All CTAs route thro
 
 ```
 app/
-├── components/          # 13 modular sections
-│   ├── Header.tsx      # Sticky nav
-│   ├── Hero.tsx        # Main CTA
-│   ├── SocialProof.tsx # Trust signals
-│   ├── HowItWorks.tsx  # 4-step process
-│   ├── Themes.tsx      # 12 theme gallery
-│   ├── Features.tsx    # 9 features
-│   ├── Pricing.tsx     # 3 plans + WhatsApp
-│   ├── Testimonials.tsx # 3 social proof
-│   ├── FAQ.tsx         # 6 Q&A
-│   ├── Guarantee.tsx   # Money-back guarantee
-│   ├── FinalCTA.tsx    # 4 WhatsApp buttons
-│   ├── Footer.tsx      # Branding
-│   └── Analytics.tsx   # Pixel + GA tracking
-├── page.tsx            # Main page composition
-├── layout.tsx          # Root layout + metadata
-└── globals.css         # CSS variables + base styles
+├── components/
+│   ├── Header.tsx        # Sticky nav
+│   ├── Hero.tsx          # Main CTA
+│   ├── SocialProof.tsx   # Trust signals (24-48h, 2 rondas, muestra gratis)
+│   ├── WhyUs.tsx         # Comparison table (plantilla gratis / freelance / Invitamx)
+│   ├── HowItWorks.tsx    # 5-step process
+│   ├── Themes.tsx        # Live catalog embed (?catalog=true iframe) -- no hardcoded count
+│   ├── Features.tsx      # 11 features
+│   ├── Pricing.tsx       # 3 plans + WhatsApp
+│   ├── FAQ.tsx           # 7 Q&A
+│   ├── Guarantee.tsx     # "Ves antes de pagar" + ajustes incluidos (no es money-back)
+│   ├── FinalCTA.tsx      # 4 WhatsApp buttons
+│   ├── Footer.tsx        # Branding + legal links
+│   ├── FloatingWhatsApp.tsx
+│   ├── Analytics.tsx     # Pixel + GA tracking
+│   └── PixelTracker.tsx
+├── privacidad/page.tsx  # Aviso de privacidad
+├── terminos/page.tsx    # Términos y condiciones
+├── page.tsx             # Main page composition
+├── layout.tsx           # Root layout + metadata
+└── globals.css          # CSS variables + base styles
 ```
+
+No hay componente de Testimonios -- se quitó a propósito (sin
+testimonios de clientes reales/verificados todavía, ver
+`ventas/registro-anuncios.txt`). No reintroducir testimonios
+inventados.
+
+El número real de temas (13 + "Personalizado") vive en
+`administradorinvitamx/src/data.ts`, no en este repo -- `Themes.tsx`
+embebe el catálogo real en vivo (`?catalog=true`) en vez de hardcodear
+el conteo, así nunca queda desactualizado. Si `Pricing.tsx`/`WhyUs.tsx`
+mencionan un número de temas en texto, confirmarlo ahí antes de
+tocarlo.
 
 ## Key Features
 
 ✅ WhatsApp integration on every CTA
 ✅ Facebook Pixel + Google Analytics ready (add IDs in .env.local)
-✅ 12 beautiful themes with gradients
+✅ 13 real themes, live-synced via catalog iframe
 ✅ Responsive mobile-first design
 ✅ SEO optimized (metadata, og:tags, canonical)
 ✅ TypeScript for safety
@@ -126,3 +142,56 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_id_here
 - **Deploy manual**: el `git push` solo actualiza GitHub; para que se vea en linea hay que correr `vercel --prod` aparte.
 - Atajo: `.\deploy.ps1 "mensaje"` en la raiz del repo hace `git add` + `commit` + `push` + `vercel --prod` en un solo paso.
 - Convencion con el usuario: cuando pida "guardar", "subir" o "publicar" este repo, correr el flujo completo sin preguntar el alcance (ver tambien `D:\repos-activos\SETUP.md` si existe esa carpeta).
+
+## Rol: Encargado de marketing de InvitaMX
+
+El usuario quiere que, cada vez que se hable de marketing/ventas/
+anuncios/landing de este negocio, actúes como su encargado de
+marketing permanente (no como quien genera un documento una sola
+vez). Esto aplica sin que el usuario tenga que pedirlo de nuevo
+(pedido explícito 2026-11-02, mismo patrón ya usado para Buen
+Cerdito en su propio CLAUDE.md).
+
+**Antes de dar cualquier recomendación o generar anuncios nuevos:**
+1. Lee `ventas/registro-anuncios.txt` completo — qué ángulo/avatar/
+   formato/producto ya se usó, qué está "usado" vs solo "generado",
+   y qué resultados reales existen.
+2. Compara contra lo que de verdad se puede vender: precios y
+   secciones reales viven en `administradorinvitamx` (repo
+   `C:\Users\isaacr\repos\administradorinvitamx\src\data.ts`), no en
+   este repo — la landing solo debe prometer lo que ese panel puede
+   entregar de verdad. El manual de usuario
+   (`D:\InvitaMX\invitamx-manual-usuario.html`) y el material de
+   campaña ya generado (`D:\InvitaMX\`) son referencia adicional, no
+   viven en git.
+3. No inventes precios, temas, plazos, garantías ni testimonios —
+   todo dato debe venir del código real, del manual, o de lo que el
+   usuario confirme. Al 2026-11-02 el negocio no tiene ningún
+   testimonio de cliente real/verificado — no fabricar ninguno hasta
+   que el usuario confirme que existen casos reales.
+
+**Al generar anuncios/recomendaciones nuevas:**
+- No repitas combinaciones de ángulo+avatar+formato+producto ya
+  registradas (salvo que el usuario pida explícitamente repetir algo
+  que funcionó bien).
+- Guarda el lote en `ventas/anuncios-<fecha>.txt` y agrega las filas
+  correspondientes a `ventas/registro-anuncios.txt`.
+- Da recomendaciones paso a paso de ejecución (objetivo de campaña,
+  presupuesto, cómo medir, cuándo escalar/pausar), no solo el copy.
+
+**Preguntas que SIEMPRE hay que hacerle al usuario antes de cerrar el
+tema** (no las puede responder por su cuenta ninguna herramienta):
+- ¿Ya publicó algo de lo generado anteriormente? ¿Qué tal le fue
+  (conversaciones de WhatsApp, cuántas pagaron el anticipo)? — sin
+  esto no se puede marcar nada como "usado" con resultado real en el
+  registro.
+- ¿Cambió algo del negocio desde la última vez (precios, paquetes,
+  temas nuevos, políticas de pases/ajustes) que no se refleje
+  todavía en `ventas/`?
+- Antes de comitear/publicar cualquier archivo nuevo de `ventas/` o
+  cambio a la landing, confirmar explícitamente (igual que con
+  cualquier otro cambio de este repo).
+
+**Mantener actualizado, no solo crear una vez:** cada conversación de
+marketing nueva debe dejar `ventas/registro-anuncios.txt` al día
+antes de terminar.
