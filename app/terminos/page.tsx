@@ -28,19 +28,28 @@ export default function TerminosPage() {
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
           Invitamx diseña invitaciones digitales personalizadas para fiestas de XV años, en tres
-          paquetes (Básico, Premium, Deluxe) con complementos opcionales. El pedido se realiza por
-          WhatsApp: eliges tema, paquete y secciones, nos compartes tus datos y fotos, y entregamos
-          tu invitación en 24–48 horas.
+          paquetes (Básico, Estándar, Premium) con complementos opcionales a la carta. El pedido
+          se realiza por WhatsApp: eliges tema, paquete y secciones, nos compartes tus datos y
+          fotos, y entregamos tu invitación en 24–48 horas.
+        </p>
+
+        <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
+          Muestra gratis
+        </h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
+          Antes de pagar nada, te mandamos sin costo una muestra real de tu invitación, con tus
+          propios datos, vigente por 5 días — esta muestra no requiere ningún anticipo.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
           Pagos
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
-          Este sitio no procesa pagos en línea. Se solicita un anticipo del 50% para apartar tu
-          fecha y comenzar el diseño; el 50% restante se cobra contra la entrega del link final.
-          El cobro se hace de forma manual (transferencia bancaria o un link de pago que te
-          compartimos por WhatsApp) — no se guarda ningún dato de tarjeta en este sitio.
+          Este sitio no procesa pagos en línea. Una vez que decides seguir adelante, se solicita un
+          anticipo del 50% para apartar tu fecha y producir la versión final de tu invitación; el
+          50% restante se cobra contra la entrega del link final. El cobro se hace de forma manual
+          (transferencia bancaria o un link de pago que te compartimos por WhatsApp) — no se
+          guarda ningún dato de tarjeta en este sitio.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
@@ -49,7 +58,7 @@ export default function TerminosPage() {
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
           Incluimos 2 rondas de ajustes sin costo dentro de los primeros 7 días después de la
           entrega. Pasado ese periodo, o después de la segunda ronda, cada ajuste adicional tiene
-          un costo de $99–150 MXN.
+          un costo fijo de $99 MXN.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>

@@ -10,8 +10,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Invitamx - Invitaciones XV Profesionales | Diseña en Minutos',
-  description: 'Crea invitaciones XV hermosas y personalizadas en minutos. 13 temas elegantes, lista de regalos, confirmación de asistencia. Comparte por WhatsApp.',
+  title: 'Invitamx - Invitaciones XV Profesionales',
+  description: 'Invitaciones XV hermosas y personalizadas, hechas a tu medida. 14 temas elegantes, lista de regalos, confirmación de asistencia. Entrega en 24-48 horas. Comparte por WhatsApp.',
   keywords: 'invitaciones XV, invitaciones quinceañera, invitaciones digitales, diseño XV, personalizado',
   metadataBase: new URL('https://invitamx.online'),
   alternates: {
@@ -23,11 +23,19 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://invitamx.online',
     siteName: 'Invitamx',
+    images: [
+      {
+        url: '/images/hero/hero-invitation.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ejemplo de invitación digital XV de Invitamx',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Invitamx - Invitaciones XV Profesionales',
-    description: 'Diseña tu invitación XV en minutos',
+    description: 'Invitaciones XV hermosas y personalizadas, entregadas en 24-48 horas',
   },
 };
 

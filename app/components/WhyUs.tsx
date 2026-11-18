@@ -24,8 +24,8 @@ export default function WhyUs() {
         { ok: true, text: 'Diseño profesional, 14 temas a elegir' },
         { ok: true, text: 'Nosotros armamos todo, tú solo mandas tus datos' },
         { ok: true, text: 'Lista en 24-48 horas' },
-        { ok: true, text: '2 rondas de ajustes incluidas' },
-        { ok: true, text: 'Desde $499 MXN' },
+        { ok: true, text: '2 rondas de ajustes incluidas, dentro de los 7 días posteriores a la entrega' },
+        { ok: true, text: 'Desde $299 MXN' },
       ],
     },
   ];

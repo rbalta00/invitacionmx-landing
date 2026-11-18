@@ -1,75 +1,20 @@
 'use client';
 
+import { PLANES, ADDONS_GENERALES, planWhatsappMessage } from '../lib/planes';
+
 export default function Pricing() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
-  const handlePlanClick = (plan: string, price: string) => {
-    const text = `Hola, quiero el Plan ${plan} - $${price}`;
+  const handlePlanClick = (planId: (typeof PLANES)[number]['id']) => {
+    const plan = PLANES.find((p) => p.id === planId);
+    if (!plan) return;
+
+    window.trackPlanEvent?.(plan.name, plan.price);
+
+    const text = planWhatsappMessage(plan);
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
-
-  const plans = [
-    {
-      name: 'Básico',
-      price: '499',
-      subtitle: 'Perfecto para empezar',
-      features: [
-        '4 fotos en galería',
-        '14 temas a elegir',
-        'Link compartible por WhatsApp',
-      ],
-      seccionesTitulo: 'Incluye estas secciones:',
-      secciones: [
-        'Pantalla de apertura',
-        'Portada principal',
-        'Cuenta regresiva',
-        'Mensaje de bienvenida',
-        'Ubicación de ceremonia',
-        'Ubicación de recepción',
-        'Itinerario del día',
-        'Código de vestimenta',
-        'Galería de fotos',
-        'Confirmación de asistencia (RSVP)',
-        'Mensaje de cierre',
-      ],
-      addOn: 'Pases digitales personalizados por familia disponibles como complemento (+$150 MXN, hasta 10 familias; +$15-20 MXN por familia extra)',
-    },
-    {
-      name: 'Premium',
-      price: '799',
-      subtitle: 'El más elegido',
-      isPopular: true,
-      features: [
-        '8 fotos en galería',
-        '14 temas a elegir',
-        'Link compartible por WhatsApp',
-      ],
-      seccionesTitulo: 'Todo lo del Básico, más:',
-      secciones: [
-        'Padres y padrinos',
-        'Mesa de regalos y datos bancarios',
-        'Hashtag de Instagram',
-        'Agregar evento a calendario',
-      ],
-      addOn: 'Pases digitales personalizados por familia disponibles como complemento (+$180 MXN, hasta 20 familias; +$15-20 MXN por familia extra)',
-    },
-    {
-      name: 'Deluxe',
-      price: '1,199',
-      subtitle: 'Todo incluido',
-      features: [
-        '14 fotos en galería',
-        '14 temas a elegir',
-        'Pases y PDF incluidos sin costo extra',
-      ],
-      seccionesTitulo: 'Todo lo del Premium, más:',
-      secciones: [
-        'Pases digitales personalizados por familia (nombre + número de invitados asignados), incluido sin costo hasta 40 familias',
-        'Descarga en PDF incluida sin costo extra',
-      ],
-    },
-  ];
 
   return (
     <section id="planes" style={{
@@ -95,9 +40,9 @@ export default function Pricing() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '24px',
         }}>
-          {plans.map((plan, idx) => (
+          {PLANES.map((plan) => (
             <div
-              key={idx}
+              key={plan.id}
               style={{
                 background: plan.isPopular ? 'linear-gradient(135deg, #8B2942 0%, #4A1226 100%)' : 'var(--surface-light)',
                 borderRadius: '12px',
@@ -199,7 +144,7 @@ export default function Pricing() {
                 </p>
               )}
               <button
-                onClick={() => handlePlanClick(plan.name, plan.price)}
+                onClick={() => handlePlanClick(plan.id)}
                 style={{
                   width: '100%',
                   background: plan.isPopular ? 'white' : 'white',
@@ -218,6 +163,48 @@ export default function Pricing() {
               </button>
             </div>
           ))}
+        </div>
+
+        <div style={{
+          marginTop: '3rem',
+          padding: '1.75rem',
+          background: 'var(--surface-light)',
+          borderRadius: '12px',
+          border: '1px solid var(--border)',
+        }}>
+          <h3 style={{
+            fontSize: '16px',
+            fontWeight: 600,
+            marginBottom: '1rem',
+            color: 'var(--primary-dark)',
+            textAlign: 'center',
+          }}>
+            Complementos a la carta (disponibles en cualquier plan)
+          </h3>
+          <ul style={{
+            listStyle: 'none',
+            padding: 0,
+            margin: '0 auto',
+            maxWidth: '640px',
+            fontSize: '14px',
+            color: 'var(--text-primary)',
+          }}>
+            {ADDONS_GENERALES.map((addon, idx) => (
+              <li
+                key={idx}
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  gap: '1rem',
+                  padding: '0.5rem 0',
+                  borderBottom: idx < ADDONS_GENERALES.length - 1 ? '1px solid var(--border)' : 'none',
+                }}
+              >
+                <span>{addon.label}</span>
+                <strong style={{ whiteSpace: 'nowrap', color: 'var(--primary)' }}>{addon.price}</strong>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

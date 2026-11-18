@@ -43,13 +43,25 @@ export default function Analytics() {
       gtag('config', gaId, { 'anonymize_ip': true });
     }
 
-    // Track plan clicks
-    const trackEvent = (planName: string) => {
+    // Track plan clicks / contact clicks.
+    // `value` debe ser numérico (precio real del plan en MXN) para que GA4 lo
+    // pueda usar como valor de conversión -- nunca el nombre del plan como string.
+    const trackEvent = (planName: string, value?: number) => {
       if ((window as any).fbq) {
-        (window as any).fbq('track', 'Lead', { content_name: planName });
+        const fbParams: Record<string, unknown> = { content_name: planName };
+        if (typeof value === 'number') {
+          fbParams.value = value;
+          fbParams.currency = 'MXN';
+        }
+        (window as any).fbq('track', 'Lead', fbParams);
       }
       if ((window as any).gtag) {
-        (window as any).gtag('event', 'generate_lead', { value: planName });
+        const gaParams: Record<string, unknown> = { plan_name: planName };
+        if (typeof value === 'number') {
+          gaParams.value = value;
+          gaParams.currency = 'MXN';
+        }
+        (window as any).gtag('event', 'generate_lead', gaParams);
       }
     };
 

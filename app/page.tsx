@@ -12,8 +12,6 @@ import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 
-export const dynamic = 'force-dynamic';
-
 export default function Home() {
   return (
     <>

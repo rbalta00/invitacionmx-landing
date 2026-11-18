@@ -1,36 +1,19 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 export default function Hero() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-  const [videoOk, setVideoOk] = useState(true);
+  // No hay video real todavía (public/videos/hero-demo.mp4 no existe en este
+  // repo -- daría 404). Mientras no se produzca uno, el hero muestra solo la
+  // foto de respaldo, con su propio fallback a layout centrado si tampoco
+  // esa imagen cargara.
   const [imageOk, setImageOk] = useState(true);
-  const showMedia = videoOk || imageOk;
-  const videoRef = useRef<HTMLVideoElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const el = videoRef.current;
-    if (!el) return;
-    const fail = () => setVideoOk(false);
-    if (el.error) fail();
-    el.addEventListener('error', fail);
-    return () => el.removeEventListener('error', fail);
-  }, []);
-
-  useEffect(() => {
-    if (videoOk) return;
-    const el = imgRef.current;
-    if (!el) return;
-    const fail = () => setImageOk(false);
-    if (el.complete && el.naturalWidth === 0) fail();
-    el.addEventListener('error', fail);
-    return () => el.removeEventListener('error', fail);
-  }, [videoOk]);
 
   const handleWhatsApp = () => {
     const text = 'Hola, quiero mi invitación XV';
+    window.trackPlanEvent?.('Hero CTA');
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
@@ -44,10 +27,10 @@ export default function Hero() {
         maxWidth: '1100px',
         margin: '0 auto',
         display: 'grid',
-        gridTemplateColumns: showMedia ? 'repeat(auto-fit, minmax(320px, 1fr))' : '1fr',
+        gridTemplateColumns: imageOk ? 'repeat(auto-fit, minmax(320px, 1fr))' : '1fr',
         gap: '3rem',
         alignItems: 'center',
-        textAlign: showMedia ? 'left' : 'center',
+        textAlign: imageOk ? 'left' : 'center',
       }}>
         <div>
           <h1 style={{
@@ -62,7 +45,7 @@ export default function Hero() {
             marginBottom: '2rem',
             lineHeight: '1.6',
           }}>
-            Olvídate de pelear con Canva o pagar de más por un diseñador. Nos mandas tus datos y fotos por WhatsApp, nosotros armamos tu invitación interactiva — con animaciones, música y cuenta regresiva — y te la entregamos lista en 24-48 horas, ajustada hasta que te encante.
+            Olvídate de pelear con Canva o pagar de más por un diseñador. Nos mandas tus datos y fotos por WhatsApp, nosotros armamos tu invitación interactiva — con animaciones, música y cuenta regresiva — y te la entregamos lista en 24-48 horas, con 2 rondas de ajustes incluidas dentro de los primeros 7 días.
           </p>
           <button
             onClick={handleWhatsApp}
@@ -85,53 +68,7 @@ export default function Hero() {
           </button>
         </div>
 
-        {videoOk && (
-          <div style={{ maxWidth: '300px', margin: '0 auto' }}>
-            <div style={{
-              position: 'relative',
-              background: 'var(--primary-dark)',
-              borderRadius: '44px',
-              padding: '14px',
-              boxShadow: '0 20px 40px rgba(74, 18, 38, 0.3)',
-            }}>
-              <div style={{
-                position: 'absolute',
-                top: '14px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: '90px',
-                height: '22px',
-                background: 'var(--primary-dark)',
-                borderRadius: '0 0 16px 16px',
-                zIndex: 2,
-              }} />
-              <div style={{
-                borderRadius: '30px',
-                overflow: 'hidden',
-                aspectRatio: '9 / 18',
-                background: '#FAF3EA',
-              }}>
-                <video
-                  ref={videoRef}
-                  src="/videos/hero-demo.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  poster="/images/hero/hero-invitation.jpg"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'contain',
-                    display: 'block',
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        )}
-
-        {!videoOk && imageOk && (
+        {imageOk && (
           <div style={{ maxWidth: '300px', margin: '0 auto' }}>
             <div style={{
               position: 'relative',
@@ -161,6 +98,7 @@ export default function Hero() {
                   ref={imgRef}
                   src="/images/hero/hero-invitation.jpg"
                   alt="Ejemplo de invitación XV"
+                  onError={() => setImageOk(false)}
                   style={{
                     width: '100%',
                     height: '100%',

@@ -57,8 +57,7 @@ app/
 │   ├── FinalCTA.tsx
 │   ├── Footer.tsx
 │   ├── FloatingWhatsApp.tsx
-│   ├── Analytics.tsx
-│   └── PixelTracker.tsx
+│   └── Analytics.tsx
 ├── privacidad/page.tsx  # Aviso de privacidad
 ├── terminos/page.tsx    # Términos y condiciones
 ├── layout.tsx           # Layout principal

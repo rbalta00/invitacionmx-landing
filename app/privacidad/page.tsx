@@ -36,7 +36,7 @@ export default function PrivacidadPage() {
         <ul style={{ fontSize: '14px', lineHeight: 1.8, paddingLeft: '1.25rem' }}>
           <li>De quien contrata el servicio: nombre de la quinceañera, número de WhatsApp, fecha y detalles del evento (ceremonia, recepción, itinerario, padrinos), y las fotografías que nos comparta.</li>
           <li>De los invitados: nombre y respuesta de confirmación de asistencia (RSVP), capturados directo desde la invitación digital.</li>
-          <li>De navegación en este sitio: datos generales de analítica (páginas vistas), si el sitio tiene activo Facebook Pixel o Google Analytics.</li>
+          <li>De navegación en este sitio: datos generales de analítica (páginas vistas, clics en los botones de contacto), recabados mediante Meta Pixel (Facebook/Instagram) y Google Analytics, ambos activos en este sitio.</li>
         </ul>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
@@ -50,6 +50,17 @@ export default function PrivacidadPage() {
         <p style={{ fontSize: '14px', lineHeight: 1.7, marginTop: '0.75rem' }}>
           No vendemos ni compartimos tus datos personales con terceros para fines distintos a la
           prestación de este servicio.
+        </p>
+
+        <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
+          Cookies y herramientas de analítica
+        </h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
+          Este sitio usa Meta Pixel (de Facebook/Instagram) y Google Analytics. Ambas herramientas
+          colocan cookies en tu navegador y registran qué páginas visitas y en qué botones haces
+          clic (por ejemplo, al elegir un plan o iniciar una conversación de WhatsApp), para que
+          podamos medir el desempeño de nuestros anuncios y mejorar este sitio. No usamos esta
+          información para identificarte personalmente fuera de esos fines.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>

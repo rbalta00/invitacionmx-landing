@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: '¿Puedo cambiar cosas después?',
-    answer: 'Claro. Tienes 2 rondas de ajustes sin costo dentro de los primeros 7 días después de la entrega. Pasado ese periodo, cada ajuste adicional tiene un costo de $99-150 MXN.',
+    answer: 'Claro. Tienes 2 rondas de ajustes sin costo dentro de los primeros 7 días después de la entrega. Pasado ese periodo, o después de la segunda ronda, cada ajuste adicional tiene un costo fijo de $99 MXN.',
   },
   {
     question: '¿Funciona en todos los celulares?',
@@ -21,15 +21,19 @@ const faqs = [
   },
   {
     question: '¿Hay soporte después?',
-    answer: 'Sí, te doy el link y te ayudo a compartirlo. Si hay dudas con tus huéspedes, yo te asesoro.',
+    answer: 'Sí, te doy el link y te ayudo a compartirlo. Si hay dudas con tus invitados, yo te asesoro.',
   },
   {
     question: '¿Puedo descargar la invitación?',
-    answer: 'Sí. Viene incluido sin costo extra en el paquete Deluxe; en Básico y Premium está disponible como complemento a la carta.',
+    answer: 'Sí. Viene incluido sin costo extra en el plan Premium; en Básico y Estándar está disponible como complemento a la carta (+$99 MXN).',
   },
   {
     question: '¿Puedo ver cómo se vería antes de comprar?',
-    answer: 'Sí. Te puedo mandar una muestra de tu invitación real, con tus datos, para que la veas antes de comprometerte a comprar — vigente por 5 días.',
+    answer: 'Sí. Te puedo mandar una muestra de tu invitación real, con tus datos, para que la veas antes de comprometerte a comprar — vigente por 5 días, sin ningún anticipo.',
+  },
+  {
+    question: '¿Puedo controlar quién entra con un código QR en la puerta?',
+    answer: 'Sí, como complemento adicional (+$150 MXN) en cualquier plan. Requiere tener activos los pases digitales por familia (incluidos en Premium, o como complemento en Básico y Estándar), ya que el control de acceso valida contra esos pases.',
   },
 ];
 

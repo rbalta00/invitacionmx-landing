@@ -31,8 +31,7 @@ app/
 │   ├── FinalCTA.tsx      # 4 WhatsApp buttons
 │   ├── Footer.tsx        # Branding + legal links
 │   ├── FloatingWhatsApp.tsx
-│   ├── Analytics.tsx     # Pixel + GA tracking
-│   └── PixelTracker.tsx
+│   └── Analytics.tsx     # Pixel + GA tracking
 ├── privacidad/page.tsx  # Aviso de privacidad
 ├── terminos/page.tsx    # Términos y condiciones
 ├── page.tsx             # Main page composition
@@ -45,7 +44,7 @@ testimonios de clientes reales/verificados todavía, ver
 `ventas/registro-anuncios.txt`). No reintroducir testimonios
 inventados.
 
-El número real de temas (13 + "Personalizado") vive en
+El número real de temas (14 + "Personalizado") vive en
 `administradorinvitamx/src/data.ts`, no en este repo -- `Themes.tsx`
 embebe el catálogo real en vivo (`?catalog=true`) en vez de hardcodear
 el conteo, así nunca queda desactualizado. Si `Pricing.tsx`/`WhyUs.tsx`
@@ -56,7 +55,7 @@ tocarlo.
 
 ✅ WhatsApp integration on every CTA
 ✅ Facebook Pixel + Google Analytics ready (add IDs in .env.local)
-✅ 13 real themes, live-synced via catalog iframe
+✅ 14 real themes, live-synced via catalog iframe
 ✅ Responsive mobile-first design
 ✅ SEO optimized (metadata, og:tags, canonical)
 ✅ TypeScript for safety

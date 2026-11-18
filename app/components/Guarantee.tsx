@@ -25,7 +25,7 @@ export default function Guarantee() {
           margin: 0,
           lineHeight: '1.6',
         }}>
-          Antes de comprometerte, te mando una muestra de tu invitación real, con tus propios datos, para que la veas tal cual quedaría. Y una vez que compras, tienes 2 rondas de ajustes sin costo para dejarla exactamente como la quieres.
+          Antes de comprometerte, te mando sin costo una muestra de tu invitación real, con tus propios datos, para que la veas tal cual quedaría — vigente por 5 días, sin ningún anticipo. Y una vez que compras, tienes 2 rondas de ajustes incluidas, dentro de los 7 días posteriores a la entrega, para dejarla exactamente como la quieres.
         </p>
       </div>
     </section>

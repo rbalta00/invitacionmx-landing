@@ -17,13 +17,13 @@ export default function HowItWorks() {
     },
     {
       number: '04',
-      title: 'Recibís tu Link',
-      description: 'Una vez aprobada, te mando el link final para que lo compartas con tus 15 y huéspedes.',
+      title: 'Recibes tu Link',
+      description: 'Una vez aprobada, te mando el link final para que lo compartas con tus 15 e invitados.',
     },
     {
       number: '05',
       title: '¡Listo!',
-      description: 'Tus huéspedes ven la invitación en celular, confirman y ven lista de regalos.',
+      description: 'Tus invitados ven la invitación en celular, confirman y ven lista de regalos.',
     },
   ];
 

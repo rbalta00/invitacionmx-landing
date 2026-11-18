@@ -3,25 +3,11 @@
 Coloca tus archivos con estos nombres exactos y aparecerán automáticamente en la página (si falta alguno, se muestra un diseño de respaldo, nada se rompe).
 
 ## Hero (sección principal, arriba)
-- `public/videos/hero-demo.mp4` — video corto mostrando la invitación (se reproduce en loop, sin sonido). Tiene prioridad sobre la foto.
-- `public/images/hero/hero-invitation.jpg` — foto de una invitación XV (se usa si no hay video, y como miniatura mientras carga el video).
+- `public/videos/hero-demo.mp4` — video corto mostrando la invitación (se reproduce en loop, sin sonido), **todavía no existe** (2026-11-18: `Hero.tsx` no lo referencia mientras no se produzca uno real, para no generar un 404). Si se agrega este archivo en el futuro, hay que volver a conectar el componente para que lo use con prioridad sobre la foto.
+- `public/images/hero/hero-invitation.jpg` — foto de una invitación XV (se usa siempre mientras no exista el video de arriba).
 
-## Temas (galería de 12 temas — coinciden con los del generador)
-Una foto por tema, en `public/images/themes/` (idealmente una captura real del tema desde el generador):
-- `dorado-clasico.jpg` — Dorado Clásico
-- `mariposas.jpg` — Vuelo de Mariposas
-- `floral-acuarela.jpg` — Floral Acuarela
-- `celestial.jpg` — Místico Celestial
-- `botanico.jpg` — Eucalipto Botánico
-- `glam-rose.jpg` — Glam Rose Oro
-- `boho-chic.jpg` — Rustique Boho Chic
-- `princesa-elegante.jpg` — Princesa Elegante
-- `marmol-oro.jpg` — Mármol & Oro Geométrico
-- `neon.jpg` — Ciber Cyber Neon
-- `coquette-pink.jpg` — XV Coquette Listones Rose
-- `coquette-luxe.jpg` — XV Coquette Luxe
-
-Si agregas o cambias un tema en el generador (`src/data.ts`), actualiza también la lista en `app/components/Themes.tsx` para que coincidan.
+## Temas
+El catálogo de temas ya NO vive en fotos sueltas de este repo — `Themes.tsx` embebe el catálogo real en vivo (`administradorinvitamx.vercel.app/?catalog=true`) en un iframe, así nunca queda desactualizado. La carpeta `public/images/themes/` (fotos estáticas de 12 temas, desactualizada frente a los 14 temas reales) se eliminó el 2026-11-18 por no tener ninguna referencia en el código.
 
 ## Testimonios (foto de cliente, opcional)
 En `public/images/testimonials/`:

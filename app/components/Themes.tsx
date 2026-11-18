@@ -33,11 +33,18 @@ export default function Themes() {
           overflow: 'hidden',
           border: '1px solid var(--border)',
         }}>
-          {/* Altura fija medida contra el catalogo real (scrollHeight ~4045px,
-              2026-11-02) -- el iframe es de otro origen, no se puede leer su alto
-              en vivo, asi que si el catalogo crece/encoge (mas/menos temas) hay
-              que volver a medir y actualizar este numero para que no reaparezca
-              un scroll interno. */}
+          {/* Altura fija medida contra el catalogo real (document.documentElement.scrollHeight
+              = 4045px, remedido en vivo el 2026-11-18 -- sin cambio respecto a la
+              medicion anterior del 2026-11-02, sigue en 14 temas) -- el iframe es
+              de otro origen, no se puede leer su alto en vivo, asi que si el
+              catalogo crece/encoge (mas/menos temas) hay que volver a medir y
+              actualizar este numero para que no reaparezca un scroll interno.
+              Nota: la medicion se tomo con la pestaña a ~1672px de ancho (no se
+              pudo forzar el viewport a los ~1136px reales del contenedor de esta
+              landing -- resize_window no cambia el ancho efectivo de la pagina en
+              este entorno); si el layout del catalogo es sensible al ancho,
+              remedir desde un dispositivo/ventana al ancho real del contenedor
+              antes de confiar en este numero al pixel. */}
           <iframe
             src="https://administradorinvitamx.vercel.app/?catalog=true"
             title="Catálogo de Temas XV en vivo"

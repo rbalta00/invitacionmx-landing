@@ -1,10 +1,25 @@
 'use client';
 
+import { PLANES, planWhatsappMessage } from '../lib/planes';
+
 export default function FinalCTA() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
-  const handleWhatsApp = (plan: string) => {
-    const text = `Hola, quiero el Plan ${plan}`;
+  const handlePlanClick = (planId: (typeof PLANES)[number]['id']) => {
+    const plan = PLANES.find((p) => p.id === planId);
+    if (!plan) return;
+
+    window.trackPlanEvent?.(plan.name, plan.price);
+
+    const text = planWhatsappMessage(plan);
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  };
+
+  const handleGeneralContact = () => {
+    window.trackPlanEvent?.('Contacto general - Final CTA');
+
+    const text = 'Hola, quiero consultarte sobre invitacionmx';
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
@@ -43,67 +58,30 @@ export default function FinalCTA() {
           flexWrap: 'wrap',
           marginBottom: '2rem',
         }}>
-          <button
-            onClick={() => handleWhatsApp('Básico $499')}
-            style={{
-              background: 'white',
-              color: 'var(--primary)',
-              border: 'none',
-              padding: '12px 24px',
-              borderRadius: '6px',
-              fontSize: '14px',
-              fontWeight: 500,
-              cursor: 'pointer',
-              transition: 'all 0.3s',
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
-            onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
-          >
-            Básico - $499
-          </button>
-          <button
-            onClick={() => handleWhatsApp('Premium $799')}
-            style={{
-              background: 'var(--accent)',
-              color: 'white',
-              border: 'none',
-              padding: '12px 24px',
-              borderRadius: '6px',
-              fontSize: '14px',
-              fontWeight: 500,
-              cursor: 'pointer',
-              transition: 'all 0.3s',
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
-            onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
-          >
-            Premium - $799
-          </button>
-          <button
-            onClick={() => handleWhatsApp('Deluxe $1,199')}
-            style={{
-              background: 'white',
-              color: 'var(--primary)',
-              border: 'none',
-              padding: '12px 24px',
-              borderRadius: '6px',
-              fontSize: '14px',
-              fontWeight: 500,
-              cursor: 'pointer',
-              transition: 'all 0.3s',
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
-            onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
-          >
-            Deluxe - $1,199
-          </button>
+          {PLANES.map((plan) => (
+            <button
+              key={plan.id}
+              onClick={() => handlePlanClick(plan.id)}
+              style={{
+                background: plan.isPopular ? 'var(--accent)' : 'white',
+                color: plan.isPopular ? 'white' : 'var(--primary)',
+                border: 'none',
+                padding: '12px 24px',
+                borderRadius: '6px',
+                fontSize: '14px',
+                fontWeight: 500,
+                cursor: 'pointer',
+                transition: 'all 0.3s',
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
+              onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
+            >
+              {plan.name} - ${plan.price}
+            </button>
+          ))}
         </div>
         <button
-          onClick={() => {
-            const text = 'Hola, quiero consultarte sobre invitacionmx';
-            const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-            window.open(url, '_blank');
-          }}
+          onClick={handleGeneralContact}
           style={{
             background: 'white',
             color: 'var(--primary)',

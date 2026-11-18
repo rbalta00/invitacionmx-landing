@@ -24,16 +24,16 @@ const ICONS = {
 
 export default function Features() {
   const features = [
-    { icon: ICONS.musica, title: 'Música Personalizada', description: 'Elige la canción perfecta para cuando se abra tu invitación.' },
-    { icon: ICONS.apertura, title: 'Animación de Apertura', description: 'Sorprende a tus huéspedes con una animación especial al abrir.' },
-    { icon: ICONS.galeria, title: 'Galería de Fotos', description: 'Sube tus fotos favoritas en alta calidad -- hasta 14 en el paquete Deluxe. Se ven perfectas.' },
-    { icon: ICONS.pases, title: 'Pases Personalizados por Familia', description: 'Cada familia recibe su propio link con su nombre y número de invitados asignado — tú controlas exactamente quién entra.' },
-    { icon: ICONS.confirmar, title: 'Confirmar Asistencia', description: 'Tus huéspedes confirman si van directo desde la invitación, y tú ves el conteo en vivo sin llevar la cuenta a mano.' },
-    { icon: ICONS.regalos, title: 'Mesa de Regalos', description: 'Tus huéspedes ven la mesa de regalos y los datos bancarios, con un botón para copiar la CLABE sin batallar.' },
+    { icon: ICONS.musica, title: 'Música Personalizada', description: 'Elige la canción perfecta para cuando se abra tu invitación. Incluida en los 3 planes.' },
+    { icon: ICONS.apertura, title: 'Animación de Apertura', description: 'Sorprende a tus invitados con una animación especial al abrir.' },
+    { icon: ICONS.galeria, title: 'Galería de Fotos', description: 'Sube tus fotos favoritas en alta calidad -- hasta 14 en el paquete Premium. Se ven perfectas.' },
+    { icon: ICONS.pases, title: 'Pases Personalizados por Familia', description: 'Cada familia recibe su propio link con su nombre y número de invitados asignado — tú controlas exactamente quién entra. Incluido sin costo en Premium (hasta 40 familias); disponible como complemento a la carta en Básico y Estándar.' },
+    { icon: ICONS.confirmar, title: 'Confirmar Asistencia', description: 'Tus invitados confirman si van directo desde la invitación, y tú ves el conteo en vivo sin llevar la cuenta a mano.' },
+    { icon: ICONS.regalos, title: 'Mesa de Regalos', description: 'Tus invitados ven la mesa de regalos y los datos bancarios, con un botón para copiar la CLABE sin batallar. Disponible desde el plan Estándar.' },
     { icon: ICONS.mapa, title: 'Mapa de Ubicación', description: 'Muestra ceremonia y recepción con GPS integrado.' },
     { icon: ICONS.reloj, title: 'Cuenta Regresiva', description: 'Los días, horas y minutos para el grande día.' },
     { icon: ICONS.vestimenta, title: 'Código de Vestimenta', description: 'Sugiere un color para que todos luzcan coordinados.' },
-    { icon: ICONS.pdf, title: 'Descarga en PDF de Regalo', description: 'Además del link interactivo, te llevas un PDF de recuerdo — no es solo digital, es algo que puedes conservar.' },
+    { icon: ICONS.pdf, title: 'Descarga en PDF de Regalo', description: 'Además del link interactivo, te llevas un PDF de recuerdo. Incluido sin costo en el plan Premium; disponible como complemento (+$99 MXN) en Básico y Estándar.' },
     { icon: ICONS.movil, title: '100% Mobile', description: 'Se ve perfecto en cualquier celular, tablet o computadora.' },
   ];
 
