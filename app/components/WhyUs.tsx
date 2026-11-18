@@ -21,7 +21,7 @@ export default function WhyUs() {
       title: 'Invitamx',
       highlight: true,
       items: [
-        { ok: true, text: 'Diseño profesional, 13 temas a elegir' },
+        { ok: true, text: 'Diseño profesional, 14 temas a elegir' },
         { ok: true, text: 'Nosotros armamos todo, tú solo mandas tus datos' },
         { ok: true, text: 'Lista en 24-48 horas' },
         { ok: true, text: '2 rondas de ajustes incluidas' },

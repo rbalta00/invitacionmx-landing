@@ -16,7 +16,7 @@ export default function Pricing() {
       subtitle: 'Perfecto para empezar',
       features: [
         '4 fotos en galería',
-        '13 temas a elegir',
+        '14 temas a elegir',
         'Link compartible por WhatsApp',
       ],
       seccionesTitulo: 'Incluye estas secciones:',
@@ -42,7 +42,7 @@ export default function Pricing() {
       isPopular: true,
       features: [
         '8 fotos en galería',
-        '13 temas a elegir',
+        '14 temas a elegir',
         'Link compartible por WhatsApp',
       ],
       seccionesTitulo: 'Todo lo del Básico, más:',
@@ -60,7 +60,7 @@ export default function Pricing() {
       subtitle: 'Todo incluido',
       features: [
         '14 fotos en galería',
-        '13 temas a elegir',
+        '14 temas a elegir',
         'Pases y PDF incluidos sin costo extra',
       ],
       seccionesTitulo: 'Todo lo del Premium, más:',
