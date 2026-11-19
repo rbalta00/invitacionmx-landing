@@ -30,7 +30,9 @@ CONTEXTO DEL NEGOCIO (no inventar fuera de esto sin confirmar)
   panel en administradorinvitamx.vercel.app (repo
   C:\Users\isaacr\repos\administradorinvitamx). La landing que
   capta leads es este repo (invitacionmx-landing ->
-  https://www.invitamx.online), con todos los CTA hacia WhatsApp.
+  https://invitamx.app, dominio principal desde el 19-nov-2026;
+  invitamx.online sigue redirigiendo ahí hasta junio 2027), con
+  todos los CTA hacia WhatsApp.
 - Paquetes y precios confirmados (data.ts del generador, rediseño de
   precios 2026-11-18 -- ACTUALIZADO 2026-11-20, los nombres/precios
   de abajo reemplazan cualquier mención vieja de "Básico $499" /

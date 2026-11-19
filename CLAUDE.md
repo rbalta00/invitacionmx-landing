@@ -86,8 +86,12 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_id_here
 4. Auto-deploy on git push
 
 ### Domain Setup
-- DNS: Point `invitamx.online` to Vercel
-- Vercel: Settings → Domains → `invitamx.online`
+- **Dominio principal (desde el 19 de noviembre de 2026): `invitamx.app`** -- DNS/Vercel ya
+  configurados desde el panel de Vercel (no tocar eso desde el repo). El dominio viejo
+  `invitamx.online` sigue conectado a este mismo proyecto, redirigiendo a `invitamx.app` --
+  seguirá vivo hasta junio de 2027, no se desconecta.
+- DNS: Point `invitamx.app` to Vercel (`invitamx.online` queda como redirect, ya configurado)
+- Vercel: Settings → Domains → `invitamx.app` (principal) + `invitamx.online` (redirect)
 
 ## Customization
 
@@ -137,7 +141,7 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_id_here
 
 ## Publicar cambios (deploy)
 
-- Repo: `rbalta00/invitacionmx-landing`, rama `main`. Vercel: proyecto `invitacionmx-landing` -> https://www.invitamx.online.
+- Repo: `rbalta00/invitacionmx-landing`, rama `main`. Vercel: proyecto `invitacionmx-landing` -> https://invitamx.app (dominio principal desde el 19 de noviembre de 2026). https://www.invitamx.online sigue conectado al mismo proyecto, redirigiendo a invitamx.app hasta junio de 2027 -- no desconectado.
 - **Auto-deploy conectado a GitHub** (confirmado 2026-11-02): un `git push` a `main` ya dispara el deploy a produccion solo, no hace falta correr `vercel --prod` aparte. La nota anterior de "deploy manual" quedo desactualizada.
 - `.\deploy.ps1 "mensaje"` sigue sirviendo para el commit+push, pero el paso `vercel --prod` dentro del script puede fallar con "Not authorized" si el CLI local de Vercel esta logueado con una cuenta sin acceso al team del proyecto (`team_jIutM0AoPJs93za5xqLWmY2E`, visto con `vercel teams ls` solo trae `isaacrbs-projects`) — no es un problema real, el deploy ya paso via GitHub antes de que ese paso corra. Si se quiere confirmar, revisar `list_deployments` del MCP de Vercel o la propia vercel.com en vez de confiar en el output del CLI local.
 - Convencion con el usuario: cuando pida "guardar", "subir" o "publicar" este repo, correr el flujo completo sin preguntar el alcance (ver tambien `D:\repos-activos\SETUP.md` si existe esa carpeta).

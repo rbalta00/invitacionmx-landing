@@ -13,15 +13,15 @@ export const metadata: Metadata = {
   title: 'Invitamx - Invitaciones XV Profesionales',
   description: 'Invitaciones XV hermosas y personalizadas, hechas a tu medida. 14 temas elegantes, lista de regalos, confirmación de asistencia. Entrega en 24-48 horas. Comparte por WhatsApp.',
   keywords: 'invitaciones XV, invitaciones quinceañera, invitaciones digitales, diseño XV, personalizado',
-  metadataBase: new URL('https://invitamx.online'),
+  metadataBase: new URL('https://invitamx.app'),
   alternates: {
-    canonical: 'https://invitamx.online',
+    canonical: 'https://invitamx.app',
   },
   openGraph: {
     title: 'Invitamx - Invitaciones XV Profesionales',
     description: 'Invitaciones XV hermosas, personalizadas y fáciles de compartir.',
     type: 'website',
-    url: 'https://invitamx.online',
+    url: 'https://invitamx.app',
     siteName: 'Invitamx',
     images: [
       {
