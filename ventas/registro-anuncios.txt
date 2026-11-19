@@ -31,29 +31,39 @@ CONTEXTO DEL NEGOCIO (no inventar fuera de esto sin confirmar)
   C:\Users\isaacr\repos\administradorinvitamx). La landing que
   capta leads es este repo (invitacionmx-landing ->
   https://www.invitamx.online), con todos los CTA hacia WhatsApp.
-- Paquetes y precios confirmados (data.ts del generador + manual de
-  usuario D:\InvitaMX\invitamx-manual-usuario.html, 2026-11-02):
-  Básico $499 MXN (4 fotos) | Premium $799 MXN (8 fotos, agrega
-  Familia/Padrinos, Mesa de Regalos+datos bancarios, Hashtag IG,
-  Agregar a calendario) | Deluxe $1,199 MXN (14 fotos, pases
-  personalizados y PDF de regalo incluidos sin costo extra).
-- 13 temas de diseño reales (Dorado Clásico, Vuelo de Mariposas,
+- Paquetes y precios confirmados (data.ts del generador, rediseño de
+  precios 2026-11-18 -- ACTUALIZADO 2026-11-20, los nombres/precios
+  de abajo reemplazan cualquier mención vieja de "Básico $499" /
+  "Premium $799" / "Deluxe $1,199" en anuncios anteriores a esa
+  fecha, ver filas de la tabla de arriba):
+  Básico $299 MXN (4 fotos, 13 secciones) | Estándar $499 MXN
+  (8 fotos, 15 secciones, agrega Familia/Padrinos, Mesa de
+  Regalos+datos bancarios) | Premium $799 MXN (14 fotos, 16
+  secciones, pases personalizados y PDF de regalo incluidos sin
+  costo extra). Hashtag de IG y "Agregar a calendario" vienen
+  incluidos desde Básico en este rediseño (antes eran exclusivos de
+  paquetes más caros).
+- 14 temas de diseño reales (Dorado Clásico, Vuelo de Mariposas,
   Floral Acuarela, Místico Celestial, Eucalipto Botánico, Glam Rose
   Oro, Rustique Boho Chic, Princesa Elegante, Mármol & Oro
   Geométrico, Ciber Cyber Neon, XV Coquette Listones Rose, XV
-  Coquette Luxe, Aurora Boreal) + 1 tema "Personalizado" (a la
-  medida, con paleta de colores base a elegir: Dorado, Lila
-  Mariposa, Rosa Acuarela, Verde Botánico, Rosa Glam, Terracota
-  Boho, Rosa Coquette o Neutro).
+  Coquette Luxe, Aurora Boreal, Vino Elegante -- nuevo 2026-11-17,
+  rojo/vino clásico) + 1 tema "Personalizado" (a la medida, con
+  paleta de colores base a elegir: Dorado, Lila Mariposa, Rosa
+  Acuarela, Verde Botánico, Rosa Glam, Terracota Boho, Rosa Coquette
+  o Neutro).
 - Entrega en 24-48 horas. 2 rondas de ajustes gratis dentro de los
-  primeros 7 días después de la entrega; después, $99-150 MXN por
-  ajuste adicional. Muestra de la invitación real (con los datos del
-  cliente) antes de comprometerse a comprar, vigente 5 días.
+  primeros 7 días después de la entrega; después, $99 MXN fijo por
+  ajuste adicional (antes era un rango "$99-150", unificado en el
+  rediseño de precios). Muestra de la invitación real (con los datos
+  del cliente) antes de comprometerse a comprar, vigente 5 días
+  (bajado de 7 días en el rediseño).
 - Pases personalizados por familia (link propio con nombre + número
-  de invitados asignados): incluido sin costo en Deluxe (hasta 40
-  familias, +$15-20 MXN por familia extra), complemento à la carte
-  +$150 MXN en Básico (hasta 10 familias) o +$180 MXN en Premium
-  (hasta 20 familias), mismo +$15-20 MXN extra arriba del tope.
+  de invitados asignados): incluido sin costo en Premium (hasta 40
+  familias, +$20 MXN fijo por familia extra -- antes rango "$15-20",
+  unificado), complemento à la carte +$150 MXN en Básico (hasta 10
+  familias) o +$180 MXN en Estándar (hasta 20 familias), mismo +$20
+  MXN extra arriba del tope en cualquier paquete.
 - Control de Acceso QR (código QR por pase para registrar entrada en
   la puerta): complemento aparte +$150 MXN plano, requiere tener
   pases activo primero.
