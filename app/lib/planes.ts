@@ -28,6 +28,11 @@ export interface Plan {
   addOn?: string;
 }
 
+/** Una sola fuente para esta línea -- se agrega a los 3 planes abajo (ver el .forEach después del
+ *  array), en vez de repetir el string a mano en cada plan. */
+const FEATURE_DISENO_A_ELEGIR =
+  'Diseños de apertura, portada e itinerario a elegir y personalización de colores y fuentes';
+
 export const PLANES: Plan[] = [
   {
     id: 'basico',
@@ -91,6 +96,7 @@ export const PLANES: Plan[] = [
       '14 temas a elegir',
       'Música personalizada',
       'Pases y PDF incluidos sin costo extra',
+      'Conteo de aperturas: ve desde tu link cuántas veces abrieron tu invitación',
     ],
     seccionesTitulo: 'Todo lo del Estándar, más:',
     secciones: [
@@ -99,6 +105,10 @@ export const PLANES: Plan[] = [
     ],
   },
 ];
+
+// La línea de diseños/personalización aplica a los 3 planes por igual (el generador no la limita
+// por paquete) -- se agrega aquí, una sola vez, en vez de repetir el string a mano en cada plan.
+PLANES.forEach((plan) => plan.features.push(FEATURE_DISENO_A_ELEGIR));
 
 /** Complementos a la carta disponibles en cualquier plan (no son parte de ningún paquete por default). */
 export const ADDONS_GENERALES = [

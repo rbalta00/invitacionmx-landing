@@ -20,13 +20,19 @@ const ICONS = {
   movil: 'M7 3h10a1 1 0 011 1v16a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1zM11 18h2',
   pases: 'M4 7a2 2 0 012-2h12a2 2 0 012 2v3a2 2 0 000 4v3a2 2 0 01-2 2H6a2 2 0 01-2-2v-3a2 2 0 000-4V7z',
   pdf: 'M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z M14 2v6h6 M12 11v6 M9.5 14.5l2.5 2.5 2.5-2.5',
+  diseno: 'M4 4h7v7H4zM13 4h7v4h-7zM13 11h7v9h-7zM4 14h7v6H4z',
+  paleta: 'M12 2a10 10 0 100 20c1.5 0 2-1 2-2s-.5-1.5-.5-2.5S14 16 15 16h2a3 3 0 003-3c0-6-4-11-8-11zM7 11a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM11 8a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM16 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM17.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z',
+  estadisticas: 'M4 20V10M10 20V4M16 20v-7M22 20H2',
 };
 
 export default function Features() {
   const features = [
     { icon: ICONS.musica, title: 'Música Personalizada', description: 'Elige la canción perfecta para cuando se abra tu invitación. Incluida en los 3 planes.' },
-    { icon: ICONS.apertura, title: 'Animación de Apertura', description: 'Sorprende a tus invitados con una animación especial al abrir.' },
-    { icon: ICONS.galeria, title: 'Galería de Fotos', description: 'Sube tus fotos favoritas en alta calidad -- hasta 14 en el paquete Premium. Se ven perfectas.' },
+    { icon: ICONS.apertura, title: 'Animación de Apertura a Elegir', description: 'Elige entre 5 animaciones al abrir tu invitación: sobre con sello de cera, cortina de gala, tarjeta, puertas de gala o destellos.' },
+    { icon: ICONS.diseno, title: 'Diseños de Portada e Itinerario', description: 'La foto principal en 4 presentaciones (circular, arco, fondo completo o marco) y el programa del día en 3 diseños (clásico, editorial o minimalista).' },
+    { icon: ICONS.paleta, title: 'Tu Tema, Tu Color y Tu Letra', description: 'Cualquiera de los temas se puede personalizar con otra paleta de colores y otras tipografías, sin perder el diseño que elegiste.' },
+    { icon: ICONS.estadisticas, title: 'Sigue las Aperturas de tu Invitación', description: 'Desde tu propio link, ve cuántas veces se ha abierto tu invitación. Incluido en el plan Premium.', badge: 'Premium' },
+    { icon: ICONS.galeria, title: 'Galería de Fotos', description: 'Sube tus fotos favoritas en alta calidad -- hasta 14 en el paquete Premium. Elige entre cuadrícula, carrusel o polaroid.' },
     { icon: ICONS.pases, title: 'Pases Personalizados por Familia', description: 'Cada familia recibe su propio link con su nombre y número de invitados asignado — tú controlas exactamente quién entra. Incluido sin costo en Premium (hasta 40 familias); disponible como complemento a la carta en Básico y Estándar.' },
     { icon: ICONS.confirmar, title: 'Confirmar Asistencia', description: 'Tus invitados confirman si van directo desde la invitación, y tú ves el conteo en vivo sin llevar la cuenta a mano.' },
     { icon: ICONS.regalos, title: 'Mesa de Regalos', description: 'Tus invitados ven la mesa de regalos y los datos bancarios, con un botón para copiar la CLABE sin batallar. Disponible desde el plan Estándar.' },
@@ -78,8 +84,26 @@ export default function Features() {
               fontWeight: 500,
               marginBottom: '0.5rem',
               color: 'var(--primary-dark)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              flexWrap: 'wrap',
             }}>
               {feature.title}
+              {'badge' in feature && feature.badge && (
+                <span style={{
+                  fontSize: '10px',
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.03em',
+                  color: '#fff',
+                  background: 'var(--accent)',
+                  borderRadius: '999px',
+                  padding: '2px 8px',
+                }}>
+                  {feature.badge}
+                </span>
+              )}
             </h3>
             <p style={{
               fontSize: '14px',

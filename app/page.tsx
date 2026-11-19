@@ -4,6 +4,7 @@ import SocialProof from './components/SocialProof';
 import WhyUs from './components/WhyUs';
 import HowItWorks from './components/HowItWorks';
 import Themes from './components/Themes';
+import HechaATuEstilo from './components/HechaATuEstilo';
 import Features from './components/Features';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -21,6 +22,7 @@ export default function Home() {
       <WhyUs />
       <HowItWorks />
       <Themes />
+      <HechaATuEstilo />
       <Features />
       <Pricing />
       <FAQ />

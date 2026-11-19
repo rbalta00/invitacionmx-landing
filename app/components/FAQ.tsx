@@ -35,6 +35,14 @@ const faqs = [
     question: '¿Puedo controlar quién entra con un código QR en la puerta?',
     answer: 'Sí, como complemento adicional (+$150 MXN) en cualquier plan. Requiere tener activos los pases digitales por familia (incluidos en Premium, o como complemento en Básico y Estándar), ya que el control de acceso valida contra esos pases.',
   },
+  {
+    question: '¿Puedo elegir cómo se abre mi invitación?',
+    answer: 'Sí: hay 5 animaciones de apertura (sobre con sello de cera, cortina de gala, tarjeta, puertas de gala y destellos) y también se elige el diseño de la portada y del itinerario. Nosotros lo dejamos aplicado en tu muestra gratis para que lo veas antes de pagar.',
+  },
+  {
+    question: '¿Puedo saber cuántas personas abrieron mi invitación?',
+    answer: 'En el plan Premium, sí: desde tu mismo link puedes ver cuántas veces se ha abierto tu invitación, para que sepas qué tan compartida está siendo.',
+  },
 ];
 
 export default function FAQ() {
