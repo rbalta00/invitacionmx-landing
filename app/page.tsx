@@ -19,14 +19,14 @@ export default function Home() {
       <Header />
       <Hero />
       <SocialProof />
-      <WhyUs />
-      <HowItWorks />
+      <Guarantee />
       <Themes />
       <HechaATuEstilo />
+      <WhyUs />
       <Features />
+      <HowItWorks />
       <Pricing />
       <FAQ />
-      <Guarantee />
       <FinalCTA />
       <Footer />
       <FloatingWhatsApp />

@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { MUESTRA_GRATIS_MENSAJE } from '../lib/whatsapp';
 
 export default function Hero() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
@@ -12,9 +13,8 @@ export default function Hero() {
   const imgRef = useRef<HTMLImageElement>(null);
 
   const handleWhatsApp = () => {
-    const text = 'Hola, quiero mi invitación XV';
-    window.trackPlanEvent?.('Hero CTA');
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    window.trackPlanEvent?.('Hero CTA - Muestra gratis');
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
     window.open(url, '_blank');
   };
 
@@ -37,7 +37,7 @@ export default function Hero() {
             marginBottom: '1rem',
             color: 'var(--primary-dark)',
           }}>
-            La Invitación XV que No Se Ve de Plantilla Gratis
+            Mira la invitación de XV de tu hija antes de pagar un solo peso
           </h1>
           <p style={{
             fontSize: '18px',
@@ -45,7 +45,7 @@ export default function Hero() {
             marginBottom: '2rem',
             lineHeight: '1.6',
           }}>
-            Olvídate de pelear con Canva o pagar de más por un diseñador. Nos mandas tus datos y fotos por WhatsApp, nosotros armamos tu invitación interactiva — con animaciones, música y cuenta regresiva — y te la entregamos lista en 24-48 horas, con 2 rondas de ajustes incluidas dentro de los primeros 7 días.
+            Olvídate de pelear con Canva o pagar de más por un diseñador. Nos dices el nombre de tu hija, la fecha y el tema que te gustó, y te mandamos una muestra real de su invitación — interactiva, con animaciones, música y cuenta regresiva — sin costo y sin anticipo.
           </p>
           <button
             onClick={handleWhatsApp}
@@ -64,7 +64,7 @@ export default function Hero() {
             onMouseOver={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
             onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
           >
-            Quiero Mi Invitación
+            Quiero mi muestra gratis
           </button>
         </div>
 

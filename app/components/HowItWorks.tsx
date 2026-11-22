@@ -2,28 +2,28 @@ export default function HowItWorks() {
   const steps = [
     {
       number: '01',
-      title: 'Envías Mensaje',
-      description: 'Contactas por WhatsApp eligiendo tu tema, tu paquete y las secciones que quieras incluir.',
+      title: 'Apartas tu fecha',
+      description: 'Con el 50% de anticipo de tu plan. Sin anticipo no se agenda producción.',
     },
     {
       number: '02',
-      title: 'Llenas tus Datos',
-      description: 'Te mando tu link personal para que captures fecha, ceremonia, itinerario y subas tus fotos directo — sin escribir todo por WhatsApp.',
+      title: 'Llenas tus datos',
+      description: 'Te mando tu link personal para que captures fecha, ceremonia, itinerario y subas tus fotos directo, con calma y completos.',
     },
     {
       number: '03',
-      title: 'La Revisas',
-      description: 'Con tus datos armo tu invitación y te mando una vista previa para que la revises y pidas los ajustes que necesites.',
+      title: 'Armamos tu invitación',
+      description: 'En 24-48 horas con todo lo de tu plan.',
     },
     {
       number: '04',
-      title: 'Recibes tu Link',
-      description: 'Una vez aprobada, te mando el link final para que lo compartas con tus 15 e invitados.',
+      title: 'La revisas',
+      description: 'Te mando la vista previa; tienes 2 rondas de ajustes incluidas dentro de los 7 días posteriores a la entrega.',
     },
     {
       number: '05',
-      title: '¡Listo!',
-      description: 'Tus invitados ven la invitación en celular, confirman y ven lista de regalos.',
+      title: 'Recibes tu link',
+      description: 'El link final para compartir con tus invitados: confirman asistencia, ven mesa de regalos y ubicación.',
     },
   ];
 
@@ -37,11 +37,19 @@ export default function HowItWorks() {
         fontSize: '28px',
         fontWeight: 500,
         textAlign: 'center',
-        marginBottom: '3rem',
+        marginBottom: '0.75rem',
         color: 'var(--primary-dark)',
       }}>
         ¿Cómo Funciona?
       </h2>
+      <p style={{
+        textAlign: 'center',
+        fontSize: '15px',
+        color: 'var(--text-secondary)',
+        marginBottom: '3rem',
+      }}>
+        ¿Y después de tu muestra? Así sigue tu compra:
+      </p>
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',

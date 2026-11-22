@@ -1,6 +1,7 @@
 'use client';
 
 import { PLANES, planWhatsappMessage } from '../lib/planes';
+import { MUESTRA_GRATIS_MENSAJE } from '../lib/whatsapp';
 
 export default function FinalCTA() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
@@ -16,11 +17,10 @@ export default function FinalCTA() {
     window.open(url, '_blank');
   };
 
-  const handleGeneralContact = () => {
-    window.trackPlanEvent?.('Contacto general - Final CTA');
+  const handleMuestraGratis = () => {
+    window.trackPlanEvent?.('Muestra gratis - Final CTA');
 
-    const text = 'Hola, quiero consultarte sobre invitacionmx';
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
     window.open(url, '_blank');
   };
 
@@ -41,7 +41,7 @@ export default function FinalCTA() {
           marginBottom: '1rem',
           color: 'white',
         }}>
-          ¿Listo para tu XV Perfecta?
+          ¿Lista para ver la invitación de tu hija?
         </h2>
         <p style={{
           fontSize: '16px',
@@ -49,14 +49,41 @@ export default function FinalCTA() {
           marginBottom: '2rem',
           lineHeight: '1.6',
         }}>
-          Cuéntame qué plan te gusta y qué tema te enamoró. Yo me encargo del resto.
+          Pide tu muestra gratis: solo dime el nombre de la festejada, la fecha y el tema que te enamoró. Te la mando sin costo y sin anticipo — el plan lo eliges después, cuando ya la viste.
+        </p>
+        <button
+          onClick={handleMuestraGratis}
+          style={{
+            background: 'white',
+            color: 'var(--primary)',
+            border: 'none',
+            padding: '14px 40px',
+            borderRadius: '8px',
+            fontSize: '16px',
+            fontWeight: 500,
+            cursor: 'pointer',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+            transition: 'all 0.3s',
+            marginBottom: '2rem',
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
+          onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
+        >
+          Quiero mi muestra gratis
+        </button>
+
+        <p style={{
+          fontSize: '13px',
+          color: 'rgba(255,255,255,0.75)',
+          marginBottom: '0.75rem',
+        }}>
+          ¿Ya viste tu muestra? Elige tu plan:
         </p>
         <div style={{
           display: 'flex',
           gap: '12px',
           justifyContent: 'center',
           flexWrap: 'wrap',
-          marginBottom: '2rem',
         }}>
           {PLANES.map((plan) => (
             <button
@@ -80,25 +107,6 @@ export default function FinalCTA() {
             </button>
           ))}
         </div>
-        <button
-          onClick={handleGeneralContact}
-          style={{
-            background: 'white',
-            color: 'var(--primary)',
-            border: 'none',
-            padding: '14px 40px',
-            borderRadius: '8px',
-            fontSize: '16px',
-            fontWeight: 500,
-            cursor: 'pointer',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-            transition: 'all 0.3s',
-          }}
-          onMouseOver={(e) => (e.currentTarget.style.transform = 'translateY(-2px)')}
-          onMouseOut={(e) => (e.currentTarget.style.transform = 'translateY(0)')}
-        >
-          Iniciar Conversación en WhatsApp 💬
-        </button>
       </div>
     </section>
   );
