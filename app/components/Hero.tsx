@@ -1,10 +1,9 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { MUESTRA_GRATIS_MENSAJE } from '../lib/whatsapp';
+import { MUESTRA_GRATIS_MENSAJE, WHATSAPP_NUMERO } from '../lib/whatsapp';
 
 export default function Hero() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
   // No hay video real todavía (public/videos/hero-demo.mp4 no existe en este
   // repo -- daría 404). Mientras no se produzca uno, el hero muestra solo la
   // foto de respaldo, con su propio fallback a layout centrado si tampoco
@@ -14,7 +13,7 @@ export default function Hero() {
 
   const handleWhatsApp = () => {
     window.trackPlanEvent?.('Hero CTA - Muestra gratis');
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
+    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
     window.open(url, '_blank');
   };
 

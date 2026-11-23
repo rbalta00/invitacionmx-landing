@@ -1,12 +1,10 @@
 'use client';
 
-import { MUESTRA_GRATIS_MENSAJE } from '../lib/whatsapp';
+import { MUESTRA_GRATIS_MENSAJE, WHATSAPP_NUMERO } from '../lib/whatsapp';
 
 export default function FloatingWhatsApp() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-
   const handleClick = () => {
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
+    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
     window.open(url, '_blank');
   };
 

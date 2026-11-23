@@ -1,10 +1,9 @@
 'use client';
 
 import { PLANES, ADDONS_GENERALES, planWhatsappMessage } from '../lib/planes';
+import { WHATSAPP_NUMERO } from '../lib/whatsapp';
 
 export default function Pricing() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-
   const handlePlanClick = (planId: (typeof PLANES)[number]['id']) => {
     const plan = PLANES.find((p) => p.id === planId);
     if (!plan) return;
@@ -12,7 +11,7 @@ export default function Pricing() {
     window.trackPlanEvent?.(plan.name, plan.price);
 
     const text = planWhatsappMessage(plan);
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
 

@@ -1,11 +1,9 @@
 'use client';
 
 import { PLANES, planWhatsappMessage } from '../lib/planes';
-import { MUESTRA_GRATIS_MENSAJE } from '../lib/whatsapp';
+import { MUESTRA_GRATIS_MENSAJE, WHATSAPP_NUMERO } from '../lib/whatsapp';
 
 export default function FinalCTA() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-
   const handlePlanClick = (planId: (typeof PLANES)[number]['id']) => {
     const plan = PLANES.find((p) => p.id === planId);
     if (!plan) return;
@@ -13,14 +11,14 @@ export default function FinalCTA() {
     window.trackPlanEvent?.(plan.name, plan.price);
 
     const text = planWhatsappMessage(plan);
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
 
   const handleMuestraGratis = () => {
     window.trackPlanEvent?.('Muestra gratis - Final CTA');
 
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
+    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
     window.open(url, '_blank');
   };
 
