@@ -46,7 +46,7 @@ export default function Themes() {
               remedir desde un dispositivo/ventana al ancho real del contenedor
               antes de confiar en este numero al pixel. */}
           <iframe
-            src="https://administradorinvitamx.vercel.app/?catalog=true"
+            src="https://invitaciones.invitamx.app/?catalog=true"
             title="Catálogo de Temas XV en vivo"
             style={{
               width: '100%',

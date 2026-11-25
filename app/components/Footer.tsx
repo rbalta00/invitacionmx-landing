@@ -20,6 +20,13 @@ export default function Footer() {
         fontSize: '12px',
         opacity: 0.8,
       }}>
+        Contacto: <a href="mailto:contacto@invitamx.app" style={{ color: 'white', textDecoration: 'underline' }}>contacto@invitamx.app</a>
+      </p>
+      <p style={{
+        margin: '0.5rem 0 0',
+        fontSize: '12px',
+        opacity: 0.8,
+      }}>
         <a href="/privacidad" style={{ color: 'white', textDecoration: 'underline' }}>Privacidad</a>
         {' • '}
         <a href="/terminos" style={{ color: 'white', textDecoration: 'underline' }}>Términos</a>

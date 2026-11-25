@@ -20,36 +20,56 @@ export default function PrivacidadPage() {
           Aviso de Privacidad
         </h1>
         <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '2rem' }}>
-          Última actualización: 31 de julio de 2026
+          Última actualización: 25 de noviembre de 2026
         </p>
 
         <p style={{ marginBottom: '1.5rem', fontSize: '14px', lineHeight: 1.7 }}>
-          Invitamx es un servicio de diseño de invitaciones digitales para fiestas de XV años.
-          Este aviso explica, en términos simples, qué datos personales recabamos y para qué los
-          usamos, conforme a la Ley Federal de Protección de Datos Personales en Posesión de los
-          Particulares (LFPDPPP).
+          InvitaMX (invitamx.app), con domicilio en Puebla, Puebla, México, es responsable del
+          tratamiento de tus datos personales, conforme a la Ley Federal de Protección de Datos
+          Personales en Posesión de los Particulares.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
-          ¿Qué datos recabamos?
+          Datos que recabamos
         </h2>
         <ul style={{ fontSize: '14px', lineHeight: 1.8, paddingLeft: '1.25rem' }}>
-          <li>De quien contrata el servicio: nombre de la quinceañera, número de WhatsApp, fecha y detalles del evento (ceremonia, recepción, itinerario, padrinos), y las fotografías que nos comparta.</li>
-          <li>De los invitados: nombre y respuesta de confirmación de asistencia (RSVP), capturados directo desde la invitación digital.</li>
-          <li>De navegación en este sitio: datos generales de analítica (páginas vistas, clics en los botones de contacto), recabados mediante Meta Pixel (Facebook/Instagram) y Google Analytics, ambos activos en este sitio.</li>
+          <li>De contacto: tu nombre y tu número de WhatsApp.</li>
+          <li>Del evento: nombre de la festejada o festejados, fecha, lugares de ceremonia y recepción, y los textos que nos pides incluir.</li>
+          <li>Fotografías: las imágenes que nos envías para la invitación.</li>
+          <li>De invitados: nombres de familias y número de pases, cuando contratas esa función.</li>
+          <li>De pago: el pago se procesa a través de Mercado Pago; InvitaMX no recibe ni almacena los datos de tu tarjeta.</li>
         </ul>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
-          ¿Para qué los usamos?
+          Fotografías de menores de edad
+        </h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
+          En eventos como XV años y cumpleaños infantiles, las fotografías de menores se utilizan
+          únicamente con la autorización de la madre, el padre o el tutor que contrata el
+          servicio, y solo para elaborar la invitación contratada.
+        </p>
+
+        <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
+          Para qué usamos tus datos (finalidades)
         </h2>
         <ul style={{ fontSize: '14px', lineHeight: 1.8, paddingLeft: '1.25rem' }}>
-          <li>Diseñar, generar y entregar la invitación digital contratada.</li>
-          <li>Comunicarnos contigo por WhatsApp sobre tu pedido (avances, pagos, ajustes).</li>
-          <li>Llevar el registro de confirmaciones de asistencia de tus invitados, para que tú los veas.</li>
+          <li>Elaborar tu muestra gratuita y tu invitación digital.</li>
+          <li>Enviarte tus links (muestra, revisión, invitación final y PDF, según tu plan).</li>
+          <li>Operar los pases y el control de acceso de tu evento, si los contrataste.</li>
+          <li>Gestionar tus pagos y darte atención por WhatsApp.</li>
         </ul>
         <p style={{ fontSize: '14px', lineHeight: 1.7, marginTop: '0.75rem' }}>
-          No vendemos ni compartimos tus datos personales con terceros para fines distintos a la
-          prestación de este servicio.
+          No usamos tus datos para fines distintos a los anteriores, y no vendemos, rentamos ni
+          compartimos tus datos personales con terceros con fines de publicidad.
+        </p>
+
+        <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
+          Transferencias
+        </h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
+          Tus datos solo se comparten con los proveedores tecnológicos indispensables para operar
+          el servicio (almacenamiento de imágenes y procesamiento de pagos), o cuando una
+          autoridad lo requiera conforme a la ley.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
@@ -77,17 +97,18 @@ export default function PrivacidadPage() {
           Tus derechos (ARCO)
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
-          Puedes solicitar en cualquier momento Acceder, Rectificar o Cancelar tus datos
-          personales, u Oponerte a su uso, contactándonos directamente por WhatsApp con el mismo
-          número donde gestionaste tu pedido.
+          Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición, así como
+          revocar tu consentimiento, escribiéndonos al correo{' '}
+          <a href="mailto:contacto@invitamx.app" style={{ color: 'var(--primary-dark)' }}>contacto@invitamx.app</a>{' '}
+          o por WhatsApp al 221 744 5410. Responderemos en los plazos que marca la ley.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
           Cambios a este aviso
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
-          Podemos actualizar este aviso ocasionalmente. La fecha de la última actualización
-          siempre aparece al inicio de esta página.
+          Cualquier cambio se publicará en invitamx.app. El uso del servicio después de un cambio
+          implica su aceptación.
         </p>
       </main>
       <Footer />

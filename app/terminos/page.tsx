@@ -20,74 +20,106 @@ export default function TerminosPage() {
           Términos y Condiciones
         </h1>
         <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '2rem' }}>
-          Última actualización: 31 de julio de 2026
+          Última actualización: 25 de noviembre de 2026
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '1rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
-          El servicio
+          1. El servicio
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
-          Invitamx diseña invitaciones digitales personalizadas para fiestas de XV años, en tres
-          paquetes (Básico, Estándar, Premium) con complementos opcionales a la carta. El pedido
-          se realiza por WhatsApp: eliges tema, paquete y secciones, nos compartes tus datos y
-          fotos, y entregamos tu invitación en 24–48 horas.
+          InvitaMX elabora invitaciones digitales para XV años, bodas, cumpleaños, bautizos,
+          primera comunión, graduaciones, baby showers y aniversarios, en los planes publicados
+          en invitamx.app: Básico $299, Estándar $499 y Premium $799 MXN, más los complementos a
+          la carta publicados (pases, PDF, QR de puerta, secciones y ajustes adicionales).
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
-          Muestra gratis
+          2. Muestra gratuita
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
-          Antes de pagar nada, te mandamos sin costo una muestra real de tu invitación, con tus
-          propios datos, vigente por 5 días — esta muestra no requiere ningún anticipo.
+          La muestra gratuita tiene una vigencia de 5 días y se entrega con marca de agua. No
+          implica compromiso de compra. Si contratas, se te envía el link permanente de la misma
+          invitación.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
-          Pagos
+          3. Anticipo
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
-          Este sitio no procesa pagos en línea. Una vez que decides seguir adelante, se solicita un
-          anticipo del 50% para apartar tu fecha y producir la versión final de tu invitación; el
-          50% restante se cobra contra la entrega del link final. El cobro se hace de forma manual
-          (transferencia bancaria o un link de pago que te compartimos por WhatsApp) — no se
-          guarda ningún dato de tarjeta en este sitio.
+          Tu invitación se aparta y el trabajo de diseño inicia al registrarse el anticipo
+          indicado para tu plan (vía link de pago de Mercado Pago). El anticipo no es
+          reembolsable, porque el trabajo de diseño y armado inicia de inmediato.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
-          Ajustes y cambios
+          4. Revisión y ajustes
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
-          Incluimos 2 rondas de ajustes sin costo dentro de los primeros 7 días después de la
-          entrega. Pasado ese periodo, o después de la segunda ronda, cada ajuste adicional tiene
-          un costo fijo de $99 MXN.
+          Pagado el anticipo, recibes un link de revisión con vigencia de 7 días, sin marca de
+          agua. Tu plan incluye 2 rondas de ajustes dentro de ese plazo; las rondas o ajustes
+          adicionales tienen el costo publicado ($99).
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
-          Cancelaciones y reembolsos
+          5. Entrega final y liquidación
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
-          Si tienes un problema con tu pedido, contáctanos por WhatsApp — lo resolvemos caso por
-          caso. El anticipo cubre el tiempo de diseño ya invertido, así que no se reembolsa una
-          vez iniciado el trabajo; si el problema es nuestro, lo corregimos sin costo.
+          El link permanente de tu invitación — y el PDF, cuando tu plan o complemento lo incluye
+          — se liberan al registrarse la liquidación total. Si el saldo no se cubre, la
+          invitación puede pausarse (deja de mostrarse públicamente) hasta regularizar el pago,
+          sin que ello genere reembolso del anticipo.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
-          Contenido que nos compartes
+          6. Tiempos de entrega
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
-          Tú conservas los derechos sobre las fotografías y textos que nos envíes para tu
-          invitación. Nos das permiso para usarlos únicamente para diseñar y entregar tu
-          invitación. El diseño de los temas, plantillas y la plataforma en sí son propiedad de
-          Invitamx.
+          La muestra y la primera revisión se entregan en 24 a 48 horas hábiles contadas a partir
+          de que recibimos tus datos completos (y, para la invitación final, tus fotografías).
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
-          Limitación de responsabilidad
+          7. Contenido que nos entregas
         </h2>
         <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
-          El servicio se ofrece "tal cual". Hacemos nuestro mejor esfuerzo para que el link de tu
-          invitación esté disponible en todo momento, pero no garantizamos disponibilidad
-          ininterrumpida frente a fallas de terceros (hosting, WhatsApp, etc.) fuera de nuestro
-          control.
+          Tú eres responsable de la exactitud de los textos, fechas, horarios, direcciones y
+          fotografías que nos entregas. Al enviarnos fotografías declaras tener autorización para
+          usarlas; tratándose de menores de edad, declaras ser su madre, padre o tutor, o contar
+          con su autorización.
+        </p>
+
+        <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
+          8. Pases y control de acceso
+        </h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
+          Cuando contratas pases o QR de puerta, la lista de familias y cantidades la
+          proporcionas tú; InvitaMX no se hace responsable de errores en los nombres o cantidades
+          proporcionados por el cliente.
+        </p>
+
+        <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
+          9. Precios
+        </h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
+          Los precios están en pesos mexicanos y pueden cambiar sin aviso para contrataciones
+          nuevas. El precio y las condiciones de una invitación ya contratada se respetan.
+        </p>
+
+        <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
+          10. Disponibilidad
+        </h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
+          InvitaMX hará esfuerzos razonables por mantener la plataforma disponible. No somos
+          responsables por fallas de servicios de terceros ajenos a nosotros (WhatsApp, la
+          pasarela de pago, la conectividad de tus invitados).
+        </p>
+
+        <h2 style={{ fontSize: '20px', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--primary-dark)' }}>
+          11. Ley aplicable
+        </h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7 }}>
+          Estos términos se rigen por las leyes de México. Para cualquier controversia, las
+          partes se someten a los tribunales de la ciudad de Puebla, Puebla.
         </p>
 
         <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '2.5rem' }}>
