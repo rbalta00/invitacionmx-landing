@@ -3,14 +3,20 @@
 import { PLANES, ADDONS_GENERALES, planWhatsappMessage } from '../lib/planes';
 import { WHATSAPP_NUMERO } from '../lib/whatsapp';
 
-export default function Pricing() {
+interface PricingProps {
+  /** Se agrega al mensaje de WhatsApp de cada plan (ej. "para mi invitación de boda" en
+   *  /bodas) -- sin ella el mensaje sale igual que siempre en la home. */
+  contexto?: string;
+}
+
+export default function Pricing({ contexto }: PricingProps = {}) {
   const handlePlanClick = (planId: (typeof PLANES)[number]['id']) => {
     const plan = PLANES.find((p) => p.id === planId);
     if (!plan) return;
 
     window.trackPlanEvent?.(plan.name, plan.price);
 
-    const text = planWhatsappMessage(plan);
+    const text = planWhatsappMessage(plan, contexto);
     const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };

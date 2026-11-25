@@ -1,6 +1,14 @@
 'use client';
 
-export default function Themes() {
+interface ThemesProps {
+  catalogoUrl?: string;
+  tituloIframe?: string;
+}
+
+export default function Themes({
+  catalogoUrl = 'https://invitaciones.invitamx.app/?catalog=true',
+  tituloIframe = 'Catálogo de Temas XV en vivo',
+}: ThemesProps = {}) {
   return (
     <section id="temas" style={{
       background: 'var(--bg-white)',
@@ -46,8 +54,8 @@ export default function Themes() {
               remedir desde un dispositivo/ventana al ancho real del contenedor
               antes de confiar en este numero al pixel. */}
           <iframe
-            src="https://invitaciones.invitamx.app/?catalog=true"
-            title="Catálogo de Temas XV en vivo"
+            src={catalogoUrl}
+            title={tituloIframe}
             style={{
               width: '100%',
               height: '4100px',

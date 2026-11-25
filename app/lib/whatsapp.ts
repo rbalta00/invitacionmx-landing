@@ -4,6 +4,13 @@
 export const MUESTRA_GRATIS_MENSAJE =
   'Hola, quiero mi muestra gratis de invitación XV. Festejada: ___ · Fecha del evento: ___ · Tema que me gustó: ___';
 
+// Mismo mensaje de "muestra gratis" de arriba, variante para /bodas (2026-11-25) -- nunca debe
+// decir "XV". Usado por los botones de muestra de esa página (hero, cierre y flotante), que
+// reciben este texto por prop en vez de tener uno propio hardcodeado -- la constante de XV
+// queda intacta, sin tocar la home.
+export const MUESTRA_BODA_MENSAJE =
+  'Hola, quiero mi muestra gratis de invitación de boda. Novios: ___ · Fecha de la boda: ___ · Tema que me gustó: ___';
+
 // Normaliza el número de WhatsApp a formato internacional completo (52 + 10 dígitos), sin
 // importar cómo esté capturada la variable de entorno en Vercel (2026-11-22) -- hoy
 // NEXT_PUBLIC_WHATSAPP_NUMBER está guardada sin el 52, y WhatsApp lo rescata, pero el formato

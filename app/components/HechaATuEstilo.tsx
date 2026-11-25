@@ -2,9 +2,15 @@
 
 import { WHATSAPP_NUMERO } from '../lib/whatsapp';
 
-export default function HechaATuEstilo() {
+interface HechaATuEstiloProps {
+  whatsappMensaje?: string;
+}
+
+export default function HechaATuEstilo({
+  whatsappMensaje = 'Hola, quiero mi invitación XV a mi estilo',
+}: HechaATuEstiloProps = {}) {
   const handleWhatsApp = () => {
-    const text = 'Hola, quiero mi invitación XV a mi estilo';
+    const text = whatsappMensaje;
     window.trackPlanEvent?.('Hecha a Tu Estilo CTA');
     const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');

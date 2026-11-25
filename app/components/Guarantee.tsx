@@ -1,24 +1,46 @@
-export default function Guarantee() {
-  const pasos = [
-    {
-      number: '01',
-      title: 'Escríbenos por WhatsApp',
-      description: 'Un mensaje y ya.',
-    },
-    {
-      number: '02',
-      title: 'Solo dinos 3 cosas',
-      description:
-        'El nombre de la festejada, la fecha del evento y el tema que te gustó (y su foto, si la tienes a la mano). Nada de formularios.',
-    },
-    {
-      number: '03',
-      title: 'Recibe el link de SU invitación',
-      description:
-        'Con su nombre y su foto, tal cual quedaría, para que la veas y la enseñes en casa antes de decidir.',
-    },
-  ];
+interface PasoMuestra {
+  number: string;
+  title: string;
+  description: string;
+}
 
+interface GuaranteeProps {
+  titulo?: string;
+  pasos?: PasoMuestra[];
+  piePromesa?: string;
+  pieAjustes?: string;
+  /** Párrafo extra opcional ("Garantía Invitamx: ...") -- solo /bodas lo pasa hoy; sin esta
+   *  prop, la sección se ve exactamente igual que siempre en la home. */
+  garantiaExtra?: string;
+}
+
+const PASOS_DEFAULT: PasoMuestra[] = [
+  {
+    number: '01',
+    title: 'Escríbenos por WhatsApp',
+    description: 'Un mensaje y ya.',
+  },
+  {
+    number: '02',
+    title: 'Solo dinos 3 cosas',
+    description:
+      'El nombre de la festejada, la fecha del evento y el tema que te gustó (y su foto, si la tienes a la mano). Nada de formularios.',
+  },
+  {
+    number: '03',
+    title: 'Recibe el link de SU invitación',
+    description:
+      'Con su nombre y su foto, tal cual quedaría, para que la veas y la enseñes en casa antes de decidir.',
+  },
+];
+
+export default function Guarantee({
+  titulo = 'La Ves Antes de Pagar: Tu Muestra Gratis',
+  pasos = PASOS_DEFAULT,
+  piePromesa = 'Sin anticipo · Sin formulario · Sin compromiso · Muestra vigente por 5 días · Se arma con el plan Estándar, para que la veas completa',
+  pieAjustes = 'Y una vez que compras, tienes 2 rondas de ajustes incluidas, dentro de los 7 días posteriores a la entrega, para dejarla exactamente como la quieres.',
+  garantiaExtra,
+}: GuaranteeProps = {}) {
   return (
     <section style={{
       maxWidth: '1000px',
@@ -35,7 +57,7 @@ export default function Guarantee() {
           marginBottom: '2rem',
           color: 'var(--primary-dark)',
         }}>
-          La Ves Antes de Pagar: Tu Muestra Gratis
+          {titulo}
         </h2>
       </div>
 
@@ -89,18 +111,31 @@ export default function Guarantee() {
         fontWeight: 500,
         margin: '0 0 1rem',
       }}>
-        Sin anticipo · Sin formulario · Sin compromiso · Muestra vigente por 5 días · Se arma con el plan Estándar, para que la veas completa
+        {piePromesa}
       </p>
 
       <p style={{
         textAlign: 'center',
         fontSize: '13px',
         color: 'var(--text-secondary)',
-        margin: 0,
+        margin: garantiaExtra ? '0 0 1rem' : 0,
         lineHeight: '1.6',
       }}>
-        Y una vez que compras, tienes 2 rondas de ajustes incluidas, dentro de los 7 días posteriores a la entrega, para dejarla exactamente como la quieres.
+        {pieAjustes}
       </p>
+
+      {garantiaExtra && (
+        <p style={{
+          textAlign: 'center',
+          fontSize: '13px',
+          color: 'var(--primary-dark)',
+          fontWeight: 500,
+          margin: 0,
+          lineHeight: '1.6',
+        }}>
+          {garantiaExtra}
+        </p>
+      )}
     </section>
   );
 }

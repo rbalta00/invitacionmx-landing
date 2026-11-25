@@ -1,4 +1,10 @@
-export default function Footer() {
+interface FooterProps {
+  tagline?: string;
+}
+
+export default function Footer({
+  tagline = 'Invitaciones XV profesionales diseñadas con amor. 💜',
+}: FooterProps = {}) {
   const year = new Date().getFullYear();
 
   return (
@@ -13,7 +19,7 @@ export default function Footer() {
       <p style={{
         margin: 0,
       }}>
-        © {year} Invitamx. Invitaciones XV profesionales diseñadas con amor. 💜
+        © {year} Invitamx. {tagline}
       </p>
       <p style={{
         margin: '0.5rem 0 0',

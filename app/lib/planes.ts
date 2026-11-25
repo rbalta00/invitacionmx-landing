@@ -126,8 +126,10 @@ export const ADDONS_GENERALES = [
   },
 ];
 
-export function planWhatsappMessage(plan: Plan): string {
-  return `Hola, quiero el Plan ${plan.name} - $${plan.price}`;
+// `contexto`: frase opcional que se agrega al final del mensaje (ej. "para mi invitación de
+// boda", usada por /bodas) -- sin ella el mensaje sale exactamente igual que siempre en la home.
+export function planWhatsappMessage(plan: Plan, contexto?: string): string {
+  return `Hola, quiero el Plan ${plan.name} - $${plan.price}${contexto ? `, ${contexto}` : ''}`;
 }
 
 export function findPlan(id: Plan['id']): Plan {

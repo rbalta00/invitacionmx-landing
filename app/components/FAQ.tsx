@@ -2,7 +2,15 @@
 
 import { useState } from 'react';
 
-const faqs = [
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+// Exportado para que /bodas pueda partir de esta misma lista (ninguna pregunta de aquí
+// menciona "XV"/"quinceañera" -- las respuestas no cambian en sustancia por tipo de evento,
+// ver brief "/bodas" 2026-11-25) en vez de duplicarla a mano.
+export const DEFAULT_FAQS: FaqItem[] = [
   {
     question: '¿Cuánto tiempo tarda?',
     answer: 'Tú envías tus datos y fotos, y yo entrego tu invitación en 24-48 horas, en cualquier paquete.',
@@ -45,7 +53,12 @@ const faqs = [
   },
 ];
 
-export default function FAQ() {
+interface FAQProps {
+  titulo?: string;
+  faqs?: FaqItem[];
+}
+
+export default function FAQ({ titulo = 'Preguntas Frecuentes', faqs = DEFAULT_FAQS }: FAQProps = {}) {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
@@ -65,7 +78,7 @@ export default function FAQ() {
           marginBottom: '3rem',
           color: 'var(--primary-dark)',
         }}>
-          Preguntas Frecuentes
+          {titulo}
         </h2>
         <div>
           {faqs.map((faq, idx) => {

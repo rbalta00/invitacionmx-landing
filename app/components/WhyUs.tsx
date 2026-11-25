@@ -1,4 +1,10 @@
-export default function WhyUs() {
+interface WhyUsProps {
+  subtitulo?: string;
+}
+
+export default function WhyUs({
+  subtitulo = 'No necesitas saber de diseño ni pagar precio de agencia para que la invitación de tu XV se vea como se merece.',
+}: WhyUsProps = {}) {
   const columns = [
     {
       title: 'Plantilla gratis (Canva, Word...)',
@@ -54,7 +60,7 @@ export default function WhyUs() {
         marginLeft: 'auto',
         marginRight: 'auto',
       }}>
-        No necesitas saber de diseño ni pagar precio de agencia para que la invitación de tu XV se vea como se merece.
+        {subtitulo}
       </p>
       <div style={{
         display: 'grid',

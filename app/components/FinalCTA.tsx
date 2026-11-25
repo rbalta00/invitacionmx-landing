@@ -3,14 +3,32 @@
 import { PLANES, planWhatsappMessage } from '../lib/planes';
 import { MUESTRA_GRATIS_MENSAJE, WHATSAPP_NUMERO } from '../lib/whatsapp';
 
-export default function FinalCTA() {
+interface FinalCTAProps {
+  titulo?: string;
+  subtitulo?: string;
+  whatsappMensajeMuestra?: string;
+  /** Frase corta opcional bajo el botón principal (ej. "Sin riesgo: primero la ves, luego
+   *  decides." en /bodas) -- sin ella no se muestra nada, igual que en la home de siempre. */
+  garantiaCorta?: string;
+  /** Se agrega al mensaje de WhatsApp de cada botón de plan (ej. "para mi invitación de
+   *  boda") -- sin ella el mensaje sale igual que siempre en la home. */
+  contexto?: string;
+}
+
+export default function FinalCTA({
+  titulo = '¿Lista para ver la invitación de tu hija?',
+  subtitulo = 'Pide tu muestra gratis: solo dime el nombre de la festejada, la fecha y el tema que te enamoró. Te la mando sin costo y sin anticipo — el plan lo eliges después, cuando ya la viste.',
+  whatsappMensajeMuestra = MUESTRA_GRATIS_MENSAJE,
+  garantiaCorta,
+  contexto,
+}: FinalCTAProps = {}) {
   const handlePlanClick = (planId: (typeof PLANES)[number]['id']) => {
     const plan = PLANES.find((p) => p.id === planId);
     if (!plan) return;
 
     window.trackPlanEvent?.(plan.name, plan.price);
 
-    const text = planWhatsappMessage(plan);
+    const text = planWhatsappMessage(plan, contexto);
     const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
@@ -18,7 +36,7 @@ export default function FinalCTA() {
   const handleMuestraGratis = () => {
     window.trackPlanEvent?.('Muestra gratis - Final CTA');
 
-    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
+    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(whatsappMensajeMuestra)}`;
     window.open(url, '_blank');
   };
 
@@ -39,7 +57,7 @@ export default function FinalCTA() {
           marginBottom: '1rem',
           color: 'white',
         }}>
-          ¿Lista para ver la invitación de tu hija?
+          {titulo}
         </h2>
         <p style={{
           fontSize: '16px',
@@ -47,7 +65,7 @@ export default function FinalCTA() {
           marginBottom: '2rem',
           lineHeight: '1.6',
         }}>
-          Pide tu muestra gratis: solo dime el nombre de la festejada, la fecha y el tema que te enamoró. Te la mando sin costo y sin anticipo — el plan lo eliges después, cuando ya la viste.
+          {subtitulo}
         </p>
         <button
           onClick={handleMuestraGratis}
@@ -69,6 +87,17 @@ export default function FinalCTA() {
         >
           Quiero mi muestra gratis
         </button>
+
+        {garantiaCorta && (
+          <p style={{
+            fontSize: '13px',
+            color: 'rgba(255,255,255,0.85)',
+            marginTop: '-1.25rem',
+            marginBottom: '2rem',
+          }}>
+            {garantiaCorta}
+          </p>
+        )}
 
         <p style={{
           fontSize: '13px',

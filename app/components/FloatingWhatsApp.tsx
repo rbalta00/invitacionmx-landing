@@ -2,9 +2,13 @@
 
 import { MUESTRA_GRATIS_MENSAJE, WHATSAPP_NUMERO } from '../lib/whatsapp';
 
-export default function FloatingWhatsApp() {
+interface FloatingWhatsAppProps {
+  mensaje?: string;
+}
+
+export default function FloatingWhatsApp({ mensaje = MUESTRA_GRATIS_MENSAJE }: FloatingWhatsAppProps = {}) {
   const handleClick = () => {
-    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
+    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
   };
 

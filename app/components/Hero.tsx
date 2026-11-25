@@ -3,7 +3,25 @@
 import { useRef, useState } from 'react';
 import { MUESTRA_GRATIS_MENSAJE, WHATSAPP_NUMERO } from '../lib/whatsapp';
 
-export default function Hero() {
+interface HeroProps {
+  titulo?: string;
+  subtitulo?: string;
+  whatsappMensaje?: string;
+  trackLabel?: string;
+  imagenSrc?: string;
+  altImagen?: string;
+}
+
+// Props con default = exactamente el texto/CTA de XV de siempre, para que la home (sin pasar
+// ninguna prop) se vea pixel a pixel igual que antes de /bodas (2026-11-25) existir.
+export default function Hero({
+  titulo = 'Mira la invitación de XV de tu hija antes de pagar un solo peso',
+  subtitulo = 'Olvídate de pelear con Canva o pagar de más por un diseñador. Nos dices el nombre de tu hija, la fecha y el tema que te gustó, y te mandamos una muestra real de su invitación — interactiva, con animaciones, música y cuenta regresiva — sin costo y sin anticipo.',
+  whatsappMensaje = MUESTRA_GRATIS_MENSAJE,
+  trackLabel = 'Hero CTA - Muestra gratis',
+  imagenSrc = '/images/hero/hero-invitation.jpg',
+  altImagen = 'Ejemplo de invitación XV',
+}: HeroProps = {}) {
   // No hay video real todavía (public/videos/hero-demo.mp4 no existe en este
   // repo -- daría 404). Mientras no se produzca uno, el hero muestra solo la
   // foto de respaldo, con su propio fallback a layout centrado si tampoco
@@ -12,8 +30,8 @@ export default function Hero() {
   const imgRef = useRef<HTMLImageElement>(null);
 
   const handleWhatsApp = () => {
-    window.trackPlanEvent?.('Hero CTA - Muestra gratis');
-    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(MUESTRA_GRATIS_MENSAJE)}`;
+    window.trackPlanEvent?.(trackLabel);
+    const url = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(whatsappMensaje)}`;
     window.open(url, '_blank');
   };
 
@@ -36,7 +54,7 @@ export default function Hero() {
             marginBottom: '1rem',
             color: 'var(--primary-dark)',
           }}>
-            Mira la invitación de XV de tu hija antes de pagar un solo peso
+            {titulo}
           </h1>
           <p style={{
             fontSize: '18px',
@@ -44,7 +62,7 @@ export default function Hero() {
             marginBottom: '2rem',
             lineHeight: '1.6',
           }}>
-            Olvídate de pelear con Canva o pagar de más por un diseñador. Nos dices el nombre de tu hija, la fecha y el tema que te gustó, y te mandamos una muestra real de su invitación — interactiva, con animaciones, música y cuenta regresiva — sin costo y sin anticipo.
+            {subtitulo}
           </p>
           <button
             onClick={handleWhatsApp}
@@ -95,8 +113,8 @@ export default function Hero() {
               }}>
                 <img
                   ref={imgRef}
-                  src="/images/hero/hero-invitation.jpg"
-                  alt="Ejemplo de invitación XV"
+                  src={imagenSrc}
+                  alt={altImagen}
                   onError={() => setImageOk(false)}
                   style={{
                     width: '100%',
