@@ -106,7 +106,10 @@ export default function BodasPage() {
         garantiaCorta="Sin riesgo: primero la ves, luego decides."
         contexto={CONTEXTO_PLAN_BODA}
       />
-      <Footer tagline="Invitaciones digitales profesionales diseñadas con amor. 💜" />
+      <Footer
+        tagline="Invitaciones digitales profesionales diseñadas con amor. 💜"
+        puente={{ texto: '¿Son XV años? Mira las invitaciones de XV →', href: '/' }}
+      />
       <FloatingWhatsApp mensaje={MUESTRA_BODA_MENSAJE} />
     </>
   );

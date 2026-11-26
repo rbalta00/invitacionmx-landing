@@ -30,7 +30,7 @@ export default function Home() {
       <Pricing />
       <FAQ />
       <FinalCTA />
-      <Footer />
+      <Footer puente={{ texto: '¿Es una boda? Mira las invitaciones de boda →', href: '/bodas' }} />
       <FloatingWhatsApp />
     </>
   );
