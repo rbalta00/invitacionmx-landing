@@ -9,8 +9,8 @@ interface GuaranteeProps {
   pasos?: PasoMuestra[];
   piePromesa?: string;
   pieAjustes?: string;
-  /** Párrafo extra opcional ("Garantía Invitamx: ...") -- solo /bodas lo pasa hoy; sin esta
-   *  prop, la sección se ve exactamente igual que siempre en la home. */
+  /** Párrafo de garantía ("Garantía Invitamx: ..."), default = la de XV de la home; /bodas pasa
+   *  su propia versión para novios. */
   garantiaExtra?: string;
 }
 
@@ -39,7 +39,7 @@ export default function Guarantee({
   pasos = PASOS_DEFAULT,
   piePromesa = 'Sin anticipo · Sin formulario · Sin compromiso · Muestra vigente por 5 días · Se arma con el plan Estándar, para que la veas completa',
   pieAjustes = 'Y una vez que compras, tienes 2 rondas de ajustes incluidas, dentro de los 7 días posteriores a la entrega, para dejarla exactamente como la quieres.',
-  garantiaExtra,
+  garantiaExtra = 'Garantía Invitamx: primero ves la invitación de tu hija, ya con su nombre y su foto. Si la muestra no te convence, no pagas un solo peso — sin anticipo y sin compromiso.',
 }: GuaranteeProps = {}) {
   return (
     <section style={{

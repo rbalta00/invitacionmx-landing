@@ -7,8 +7,8 @@ interface FinalCTAProps {
   titulo?: string;
   subtitulo?: string;
   whatsappMensajeMuestra?: string;
-  /** Frase corta opcional bajo el botón principal (ej. "Sin riesgo: primero la ves, luego
-   *  decides." en /bodas) -- sin ella no se muestra nada, igual que en la home de siempre. */
+  /** Frase corta bajo el botón principal ("Sin riesgo: primero la ves, luego decides."),
+   *  default = la misma de la home; /bodas la pasa igual, sin diferencia. */
   garantiaCorta?: string;
   /** Se agrega al mensaje de WhatsApp de cada botón de plan (ej. "para mi invitación de
    *  boda") -- sin ella el mensaje sale igual que siempre en la home. */
@@ -19,7 +19,7 @@ export default function FinalCTA({
   titulo = '¿Lista para ver la invitación de tu hija?',
   subtitulo = 'Pide tu muestra gratis: solo dime el nombre de la festejada, la fecha y el tema que te enamoró. Te la mando sin costo y sin anticipo — el plan lo eliges después, cuando ya la viste.',
   whatsappMensajeMuestra = MUESTRA_GRATIS_MENSAJE,
-  garantiaCorta,
+  garantiaCorta = 'Sin riesgo: primero la ves, luego decides.',
   contexto,
 }: FinalCTAProps = {}) {
   const handlePlanClick = (planId: (typeof PLANES)[number]['id']) => {

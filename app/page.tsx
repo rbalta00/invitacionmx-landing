@@ -7,6 +7,7 @@ import Themes from './components/Themes';
 import HechaATuEstilo from './components/HechaATuEstilo';
 import Features from './components/Features';
 import Pricing from './components/Pricing';
+import Testimonios from './components/Testimonios';
 import FAQ from './components/FAQ';
 import Guarantee from './components/Guarantee';
 import FinalCTA from './components/FinalCTA';
@@ -25,6 +26,7 @@ export default function Home() {
       <WhyUs />
       <Features />
       <HowItWorks />
+      <Testimonios />
       <Pricing />
       <FAQ />
       <FinalCTA />
