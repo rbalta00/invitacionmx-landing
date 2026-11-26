@@ -19,10 +19,9 @@ import { MUESTRA_BODA_MENSAJE } from '../lib/whatsapp';
 // FinalCTA) -- nunca cambia el precio/contenido del plan, solo deja claro que es para una boda.
 const CONTEXTO_PLAN_BODA = 'para mi invitación de boda';
 
-// Pendiente (brief "/bodas" 2026-11-25): Muse debe generar y subir a Cloudinary el mockup de
-// celular con una invitación de boda real para el hero de esta página. Mientras eso no exista,
-// se usa la misma foto del hero de XV como marcador -- nunca se inventa otra URL.
-const HERO_BODAS_URL = '/images/hero/hero-invitation.jpg';
+// Foto del hero de boda (mockup de celular con invitación de boda real) generada y subida a
+// Cloudinary por Muse (2026-11-25), cloud dswrrm5u1.
+const HERO_BODAS_URL = 'https://res.cloudinary.com/dswrrm5u1/image/upload/v1795633222/a7ylkuv4azoawcil2wsr.jpg';
 
 export const metadata: Metadata = {
   title: 'Invitamx — Invitaciones de Boda Digitales',
