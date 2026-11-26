@@ -3,7 +3,7 @@ export default function HowItWorks() {
     {
       number: '01',
       title: 'Apartas tu fecha',
-      description: 'Con el 50% de anticipo de tu plan. Sin anticipo no se agenda producción.',
+      description: 'Con el anticipo indicado para tu plan. Sin anticipo no se agenda producción.',
     },
     {
       number: '02',
