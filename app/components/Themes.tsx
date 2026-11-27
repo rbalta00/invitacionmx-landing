@@ -1,14 +1,54 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
+
 interface ThemesProps {
   catalogoUrl?: string;
   tituloIframe?: string;
 }
 
+// Altura fija del GRID de 14 tarjetas del catálogo (ver comentario de abajo sobre cómo se midió).
+const ALTURA_GRID_CATALOGO = '4100px';
+
 export default function Themes({
   catalogoUrl = 'https://invitaciones.invitamx.app/?catalog=true',
   tituloIframe = 'Catálogo de Temas XV en vivo',
 }: ThemesProps = {}) {
+  // Fix "demo en vivo desajustado en celular" (2026-11-26/27, v2 -- ver CLAUDE.md de
+  // administradorinvitamx): el catálogo embebido abajo usa `vh` para el marco de celular de su
+  // demo, que se calcula contra el alto de ESTE iframe, no contra la pantalla real del
+  // visitante -- con el iframe fijo a 4100px (medido para que el grid quepa sin scroll), el
+  // marco salía ~3362px de alto en celular. El catálogo nos avisa por `postMessage` cuándo entra
+  // o sale de la vista de un tema/estilo; mientras está dentro, agrandamos el iframe al alto
+  // real de la ventana del visitante (el `vh` de adentro ya calcula bien contra eso) y lo
+  // regresamos a la altura fija del grid al volver.
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [alturaIframe, setAlturaIframe] = useState(ALTURA_GRID_CATALOGO);
+  const [demoAbierta, setDemoAbierta] = useState(false);
+
+  useEffect(() => {
+    function onMessage(ev: MessageEvent) {
+      if (!ev.data || ev.data.type !== 'invitamx-catalog-demo') return;
+      // Solo confiar en mensajes que vengan del iframe real del catálogo, no de cualquier otra
+      // ventana/origen que por lo que sea intente mandar el mismo tipo de mensaje.
+      if (iframeRef.current && ev.source !== iframeRef.current.contentWindow) return;
+      setDemoAbierta(!!ev.data.expanded);
+    }
+    window.addEventListener('message', onMessage);
+    return () => window.removeEventListener('message', onMessage);
+  }, []);
+
+  useEffect(() => {
+    if (!demoAbierta) {
+      setAlturaIframe(ALTURA_GRID_CATALOGO);
+      return;
+    }
+    const actualizar = () => setAlturaIframe(`${window.innerHeight}px`);
+    actualizar();
+    window.addEventListener('resize', actualizar);
+    return () => window.removeEventListener('resize', actualizar);
+  }, [demoAbierta]);
+
   return (
     <section id="temas" style={{
       background: 'var(--bg-white)',
@@ -54,11 +94,12 @@ export default function Themes({
               remedir desde un dispositivo/ventana al ancho real del contenedor
               antes de confiar en este numero al pixel. */}
           <iframe
+            ref={iframeRef}
             src={catalogoUrl}
             title={tituloIframe}
             style={{
               width: '100%',
-              height: '4100px',
+              height: alturaIframe,
               border: 'none',
               display: 'block',
             }}
