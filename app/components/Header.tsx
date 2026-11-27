@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
 
 const LINKS = [
   { href: '#como-funciona', label: 'Cómo funciona' },
@@ -11,19 +10,8 @@ const LINKS = [
   { href: '#faq', label: 'FAQ' },
 ];
 
-// Switcher entre las 3 landings de evento (home/XV, /bodas, /cumpleanos) -- antes la única forma
-// de llegar de una a otra era un link chico en letra de 12px al fondo del footer, fácil de no
-// ver. Vive aquí (Header, compartido por las 3 páginas) para que sea visible siempre, en
-// cualquiera de las 3, sin tener que repetirlo página por página.
-const TIPOS_EVENTO = [
-  { href: '/', label: 'XV Años' },
-  { href: '/bodas', label: 'Bodas' },
-  { href: '/cumpleanos', label: 'Cumpleaños' },
-];
-
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <header style={{
@@ -83,35 +71,6 @@ export default function Header() {
           </svg>
         </button>
       </div>
-
-      <nav aria-label="Tipo de evento" style={{
-        display: 'flex',
-        gap: '0.5rem',
-        flexWrap: 'wrap',
-        marginTop: '0.75rem',
-      }}>
-        {TIPOS_EVENTO.map((t) => {
-          const activo = pathname === t.href;
-          return (
-            <a
-              key={t.href}
-              href={t.href}
-              style={{
-                padding: '0.35rem 0.9rem',
-                borderRadius: '999px',
-                fontSize: '13px',
-                fontWeight: 600,
-                textDecoration: 'none',
-                border: '1px solid var(--primary)',
-                color: activo ? 'white' : 'var(--primary-dark)',
-                background: activo ? 'var(--primary)' : 'transparent',
-              }}
-            >
-              {t.label}
-            </a>
-          );
-        })}
-      </nav>
 
       {open && (
         <nav className="header-nav-mobile" style={{
