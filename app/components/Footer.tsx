@@ -1,8 +1,9 @@
 interface FooterProps {
   tagline?: string;
-  /** Línea discreta opcional que manda a la otra página de evento (ej. home <-> /bodas) --
-   *  sin esta prop no se muestra nada, igual que en el footer de siempre. */
-  puente?: { texto: string; href: string };
+  /** Línea(s) discreta(s) opcional(es) que mandan a otra página de evento (ej. home -> /bodas y
+   *  /cumpleanos, o /bodas -> home) -- un solo objeto (como antes) o un arreglo de varios; sin
+   *  esta prop no se muestra nada, igual que en el footer de siempre. */
+  puente?: { texto: string; href: string } | Array<{ texto: string; href: string }>;
 }
 
 export default function Footer({
@@ -10,6 +11,7 @@ export default function Footer({
   puente,
 }: FooterProps = {}) {
   const year = new Date().getFullYear();
+  const puentes = puente ? (Array.isArray(puente) ? puente : [puente]) : [];
 
   return (
     <footer style={{
@@ -32,11 +34,11 @@ export default function Footer({
       }}>
         Contacto: <a href="mailto:contacto@invitamx.app" style={{ color: 'white', textDecoration: 'underline' }}>contacto@invitamx.app</a>
       </p>
-      {puente && (
-        <p style={{ margin: '0.5rem 0 0', fontSize: '12px', opacity: 0.8 }}>
-          <a href={puente.href} style={{ color: 'white', textDecoration: 'underline' }}>{puente.texto}</a>
+      {puentes.map((p) => (
+        <p key={p.href} style={{ margin: '0.5rem 0 0', fontSize: '12px', opacity: 0.8 }}>
+          <a href={p.href} style={{ color: 'white', textDecoration: 'underline' }}>{p.texto}</a>
         </p>
-      )}
+      ))}
       <p style={{
         margin: '0.5rem 0 0',
         fontSize: '12px',

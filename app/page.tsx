@@ -35,7 +35,10 @@ export default function Home() {
       <Pricing />
       <FAQ />
       <FinalCTA />
-      <Footer puente={{ texto: '¿Es una boda? Mira las invitaciones de boda →', href: '/bodas' }} />
+      <Footer puente={[
+        { texto: '¿Es una boda? Mira las invitaciones de boda →', href: '/bodas' },
+        { texto: '¿Es un cumpleaños? Mira las invitaciones de cumpleaños →', href: '/cumpleanos' },
+      ]} />
       <FloatingWhatsApp />
     </>
   );
