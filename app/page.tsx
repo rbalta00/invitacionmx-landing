@@ -39,6 +39,7 @@ export default function Home() {
         { texto: '¿Es una boda? Mira las invitaciones de boda →', href: '/bodas' },
         { texto: '¿Es un cumpleaños? Mira las invitaciones de cumpleaños →', href: '/cumpleanos' },
         { href: "/bautizo", texto: "¿Es un bautizo? Mira las invitaciones de bautizo →" },
+        { href: "/primera-comunion", texto: "¿Es una primera comunión? Mira las invitaciones de primera comunión →" },
       ]} />
       <FloatingWhatsApp />
     </>
