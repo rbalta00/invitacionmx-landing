@@ -40,6 +40,12 @@ export const MUESTRA_GRADUACION_MENSAJE =
 export const MUESTRA_BABY_SHOWER_MENSAJE =
   "Hola, quiero mi muestra gratis de invitación de baby shower 🍼. El nombre de mi bebé es: ____. La fecha del baby shower es: ____. El tema que me gustó es: ____.";
 
+// Mismo mensaje de "muestra gratis", variante para /aniversario -- nunca debe decir "XV", "boda",
+// "cumpleaños", "bautizo", "primera comunión", "graduación" ni "baby shower". Usado por los botones
+// de muestra de esa página (hero, cierre y flotante).
+export const MUESTRA_ANIVERSARIO_MENSAJE =
+  "Hola, quiero mi muestra gratis de invitación de aniversario 💛. Nuestros nombres son: ____. La fecha del aniversario es: ____. El tema que me gustó es: ____.";
+
 // Normaliza el número de WhatsApp a formato internacional completo (52 + 10 dígitos), sin
 // importar cómo esté capturada la variable de entorno en Vercel (2026-11-22) -- hoy
 // NEXT_PUBLIC_WHATSAPP_NUMBER está guardada sin el 52, y WhatsApp lo rescata, pero el formato

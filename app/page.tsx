@@ -42,6 +42,7 @@ export default function Home() {
         { href: "/primera-comunion", texto: "¿Es una primera comunión? Mira las invitaciones de primera comunión →" },
         { href: "/graduacion", texto: "¿Es una graduación? Mira las invitaciones de graduación →" },
         { href: "/baby-shower", texto: "¿Es un baby shower? Mira las invitaciones de baby shower →" },
+        { href: "/aniversario", texto: "¿Es un aniversario? Mira las invitaciones de aniversario →" },
       ]} />
       <FloatingWhatsApp />
     </>
